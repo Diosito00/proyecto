@@ -1,0 +1,5 @@
+.carousel-item img {
+    height: 500px; /* Cambia el 500px por la altura que prefieras */
+    object-fit: cover;
+    object-position: center; /* Centra la imagen al recortarla */
+}
