@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'SystemFont';
+    src: url('fonts/system-font-from-windows-3-1.otf') format('opentype');
+    font-display: swap;
+}
+
+/* Color de fondo del navbar (Casi negro como en la imagen) */
+.custom-navbar {
+    background-color: #1a1a1a; 
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+/* Estilo de los enlaces principales */
+.center-links .nav-link {
+    color: #ffffff !important;
+    font-weight: 700; /* Letra en negrita */
+    font-size: 15px;
+    padding: 0.5rem 1.2rem !important; /* Espaciado entre palabras */
+    transition: color 0.2s ease-in-out;
+}
+
+/* Efecto al pasar el mouse por los enlaces */
+.center-links .nav-link:hover {
+    color: #a0a0a0 !important;
+}
+
+/* Estilo de la caja de BUSCAR */
+.btn-search {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #555555; /* Borde gris oscuro */
+    border-radius: 0; /* Quita el redondeo por defecto de Bootstrap */
+    padding: 0.4rem 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-search:hover {
+    border-color: #ffffff; /* El borde se ilumina al pasar el mouse */
+    color: #ffffff;
+}
+
+/* Estilo de los iconos (Corazón, Carrito, Usuario) */
+.nav-icons a {
+    color: #ffffff;
+    font-size: 1.2rem; /* Tamaño de los iconos */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-icons a:hover {
+    color: #a0a0a0;
+}

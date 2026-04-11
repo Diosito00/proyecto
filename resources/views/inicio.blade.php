@@ -3,19 +3,20 @@
     <head>
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
         <title>Tillas</title>
-        <link rel="stylesheet" href="/css/estilos.css">
+        <link rel="stylesheet" href="css/style-carrusel.css">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        {{-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">Tillas</a>
                 <div class="navbar-nav">
-                    <a class="nav-link" href="/inicio">Inicio</a>
-                    <a class="nav-link active" href="/inicio">Tienda</a>
-                    <a class="nav-link active" href="/inicio">Nosotros</a>
+                    <a class="nav-link active" aria-current="page" href="/inicio">Inicio</a>
+                    <a class="nav-link" href="/inicio">Tienda</a>
+                    <a class="nav-link" href="/inicio">Nosotros</a>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
+        <x-navbar/>
         
         <div id="carruselInicio" class="carousel slide">
             <div class="carousel-indicators">
@@ -25,7 +26,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ asset('imagenes/descarga.jpg') }}" class="d-block w-100" alt="Slide 1">
+                    <img src="{{ asset('imagenes/img_slide1.jpg') }}" class="d-block w-100" alt="Slide 1">
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('imagenes/img1.jpg') }}" class="d-block w-100" alt="Slide 2">
@@ -43,7 +44,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <x-footer />
     </body>
 </html>
