@@ -4,47 +4,87 @@
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
         <title>Tillas</title>
         <link rel="stylesheet" href="css/style-carrusel.css">
+        <link rel="stylesheet" href="css/style-inicio.css">
     </head>
     <body>
-        {{-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Tillas</a>
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="/inicio">Inicio</a>
-                    <a class="nav-link" href="/inicio">Tienda</a>
-                    <a class="nav-link" href="/inicio">Nosotros</a>
-                </div>
-            </div>
-        </nav> --}}
-        <x-navbar/>
-        
-        <div id="carruselInicio" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{ asset('imagenes/img_slide1.jpg') }}" class="d-block w-100" alt="Slide 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('imagenes/img1.jpg') }}" class="d-block w-100" alt="Slide 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('imagenes/img2.jpg') }}" class="d-block w-100" alt="Slide 3">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carruselInicio" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carruselInicio" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        {{-- Barra de Navegacion --}}
+        <x-navbar/>
+        {{-- Carrusel --}}
+        <x-carousel/>
+
+        <section class="container py-5 my-3 border-bottom">
+            <div class="row g-4 text-center">
+                
+                <div class="col-6 col-md-3 feature-box">
+                    <i class="bi bi-truck fs-1 mb-3 d-block"></i>
+                    <h6 class="fw-bold mb-1">ENVÍOS A TODO EL PAÍS</h6>
+                    <p class="text-muted small mb-0">En compras mayores a $50.000</p>
+                </div>
+
+                <div class="col-6 col-md-3 feature-box">
+                    <i class="bi bi-credit-card fs-1 mb-3 d-block"></i>
+                    <h6 class="fw-bold mb-1">CUOTAS SIN INTERÉS</h6>
+                    <p class="text-muted small mb-0">Con tarjetas seleccionadas</p>
+                </div>
+
+                <div class="col-6 col-md-3 feature-box">
+                    <i class="bi bi-arrow-repeat fs-1 mb-3 d-block"></i>
+                    <h6 class="fw-bold mb-1">CAMBIOS GRATIS</h6>
+                    <p class="text-muted small mb-0">Dentro de los 30 días</p>
+                </div>
+
+                <div class="col-6 col-md-3 feature-box">
+                    <i class="bi bi-shield-check fs-1 mb-3 d-block"></i>
+                    <h6 class="fw-bold mb-1">COMPRA SEGURA</h6>
+                    <p class="text-muted small mb-0">Protegemos tus datos</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container py-5 my-2">
+            <h3 class="text-center fw-bold mb-4 text-uppercase">Compra por Categoría</h3>
+            
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <a href="/hombres" class="category-card d-block position-relative rounded overflow-hidden">
+                        <img src="{{ asset('imagenes/cat-hombre.jpg') }}" alt="Hombres" class="w-100">
+                        <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Hombres</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <a href="/mujeres" class="category-card d-block position-relative rounded overflow-hidden">
+                        <img src="{{ asset('imagenes/cat-mujer.jpg') }}" alt="Mujeres" class="w-100">
+                        <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Mujeres</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <a href="/ninos" class="category-card d-block position-relative rounded overflow-hidden">
+                        <img src="{{ asset('imagenes/cat-ninos.jpg') }}" alt="Niños" class="w-100">
+                        <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Niños</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <a href="/deportes" class="category-card d-block position-relative rounded overflow-hidden">
+                        <img src="{{ asset('imagenes/cat-deportes.jpg') }}" alt="Deportes" class="w-100">
+                        <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Deportes</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        {{--Pie de Pagina--}}
         <x-footer />
     </body>
 </html>
