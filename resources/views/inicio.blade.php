@@ -8,11 +8,15 @@
     </head>
     <body>
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
         {{-- Barra de Navegacion --}}
         <x-navbar/>
+
         {{-- Carrusel --}}
+
         <x-carousel/>
 
+        {{-- Sección de Beneficios --}}
         <section class="container py-5 my-3 border-bottom">
             <div class="row g-4 text-center">
                 
@@ -43,6 +47,7 @@
             </div>
         </section>
 
+        {{-- Sección de Categorias --}} 
         <section class="container py-5 my-2">
             <h3 class="text-center fw-bold mb-4 text-uppercase">Compra por Categoría</h3>
             
@@ -84,6 +89,116 @@
                 </div>
             </div>
         </section>
+        
+        {{-- Sección de Nuevos Ingresos --}}
+        <section class="container py-5">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <h3 class="fw-bold mb-0 text-uppercase">Nuevos Ingresos</h3>
+                <a href="/tienda" class="text-dark text-decoration-none fw-bold border-bottom border-dark pb-1 small text-uppercase tracking-wide">Ver todos</a>
+            </div>
+            
+            <div class="row g-4">
+                
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card border-0 h-100">
+                        <div class="position-relative bg-light rounded overflow-hidden">
+                            <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 z-1 px-2 py-1">NUEVO</span>
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="{{ asset('imagenes/Puma-v-n-3.jpg') }}" class="card-img-top product-img" alt="Puma Velocity">
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                            <p class="text-muted small mb-1 text-uppercase tracking-wide">Puma</p>
+                            <h5 class="card-title fw-bold mb-1 fs-6">Puma Velocity Nitro 3</h5>
+                            <p class="card-text fw-bold fs-5 mb-3">$125.000</p>
+                            <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card border-0 h-100">
+                        <div class="position-relative bg-light rounded overflow-hidden">
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="{{ asset('imagenes/Puma-Salehe-b-v-n-u.jpg') }}" class="card-img-top product-img" alt="Nike Air Zoom">
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                            <p class="text-muted small mb-1 text-uppercase tracking-wide">Puma</p>
+                            <h5 class="card-title fw-bold mb-1 fs-6">Puma x Salehe Bembury</h5>
+                            <p class="card-text fw-bold fs-5 mb-3">$145.000</p>
+                            <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card border-0 h-100">
+                        <div class="position-relative bg-light rounded overflow-hidden">
+                            <span class="badge bg-danger text-white position-absolute top-0 start-0 m-3 z-1 px-2 py-1">-15%</span>
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="{{ asset('imagenes/Topper-c-m.jpg') }}" class="card-img-top product-img" alt="Adidas Ultraboost">
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                            <p class="text-muted small mb-1 text-uppercase tracking-wide">Topper</p>
+                            <h5 class="card-title fw-bold mb-1 fs-6">Topper Core Mesh</h5>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <p class="card-text fw-bold fs-5 mb-0">$180.000</p>
+                                <p class="text-decoration-line-through text-muted small mb-0">$211.000</p>
+                            </div>
+                            <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card product-card border-0 h-100">
+                        <div class="position-relative bg-light rounded overflow-hidden">
+                            <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="{{ asset('imagenes/Topper-f-2.jpg') }}" class="card-img-top product-img" alt="New Balance 550">
+                        </div>
+                        <div class="card-body px-0 pb-0">
+                            <p class="text-muted small mb-1 text-uppercase tracking-wide">Topper</p>
+                            <h5 class="card-title fw-bold mb-1 fs-6">Topper Fast 2.0</h5>
+                            <p class="card-text fw-bold fs-5 mb-3">$160.000</p>
+                            <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        {{-- Sección de Banner Promocional --}}
+        <section class="container-fluid px-0 my-5">
+            <div class="promo-banner position-relative d-flex align-items-center justify-content-center text-center">
+                
+                <div class="promo-overlay position-absolute top-0 start-0 w-100 h-100 z-1"></div>
+                
+                <div class="promo-content position-relative z-2 text-white p-4">
+                    <p class="text-uppercase tracking-wide fw-bold mb-2 text-light">Edición Limitada</p>
+                    <h2 class="display-4 fw-bold text-uppercase tracking-wide mb-3">Semana de las Marcas</h2>
+                    <p class="fs-5 mb-4">Descubre lo mejor de <span class="fw-bold text-uppercase">Puma</span> y <span class="fw-bold text-uppercase">Topper</span> en un solo lugar.</p>
+                    
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mt-4">
+                        <a href="/puma" class="btn btn-light fw-bold text-uppercase px-5 py-3 rounded-0 btn-marca">
+                            Ver colección Puma
+                        </a>
+                        <a href="/topper" class="btn btn-outline-light fw-bold text-uppercase px-5 py-3 rounded-0 btn-marca">
+                            Ver colección Topper
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         {{--Pie de Pagina--}}
         <x-footer />
     </body>

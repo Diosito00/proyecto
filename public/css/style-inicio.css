@@ -49,3 +49,92 @@
 .category-card:hover .category-overlay {
     background-color: rgba(0, 0, 0, 0.5); /* Se oscurece más para resaltar el texto */
 }
+
+/* --- SECCIÓN DE PRODUCTOS --- */
+
+.product-card {
+    background-color: transparent;
+}
+
+/* Control del fondo y la imagen */
+.product-card .bg-light {
+    background-color: #f8f9fa !important;
+    aspect-ratio: 1 / 1; /* Mantiene un cuadrado perfecto para la foto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img {
+    object-fit: contain;
+    width: 80%; /* Deja un pequeño margen interno para que la zapatilla respire */
+    transition: transform 0.4s ease;
+}
+
+/* Efecto Hover en la tarjeta entera */
+.product-card:hover .product-img {
+    transform: scale(1.08) translateY(-5px); /* La zapatilla se acerca y sube ligeramente */
+}
+
+/* Botón de favoritos (Corazón) */
+.wish-btn {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    color: #1a1a1a;
+}
+
+.wish-btn:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Botón de Comprar */
+.btn-comprar {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-comprar:hover {
+    background-color: #333333; /* Un gris un poco más claro al pasar el mouse */
+}
+
+/* --- BANNER PROMOCIONAL --- */
+
+.promo-banner {
+    /* Reemplaza con una imagen apaisada de buena resolución donde salgan zapatillas */
+    /* Como estás en Laravel, lo ideal sería aplicarlo en línea en el HTML, pero te lo dejo aquí estructurado */
+    background-image: url('../imagenes/banner-tillas.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* El famoso efecto Parallax */
+    min-height: 500px; /* Altura del banner */
+}
+
+/* Degrado oscuro sobre la imagen para resaltar el texto */
+.promo-overlay {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(26, 26, 26, 0.5) 100%);
+}
+
+.promo-content {
+    /* Una pequeña sombra al texto para separarlo aún más del fondo */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.btn-marca {
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border-width: 2px;
+}
+
+.btn-marca:hover {
+    transform: translateY(-3px); /* Los botones suben un poquito al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
