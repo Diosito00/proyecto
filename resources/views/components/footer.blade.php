@@ -28,8 +28,8 @@
             <div class="col-12 col-md-3">
                 <h6>Sobre Nosotros</h6>
                 <p>
-                    Catacumbas es una plataforma especializada en consolas, videojuegos clásicos y accesorios retro.
-                    Diseñada para jugadores y coleccionistas, ofrecemos compras seguras y recomendaciones expertas.
+                    Tillas es una plataforma especializada en calzados deportivos.
+                    Diseñada para mujeres, hombres y niños, ofrecemos compras seguras y recomendaciones expertas.
                 </p>
             </div>
 
@@ -42,7 +42,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <span>+54 379 4246721</span>
+                    <span>+54 379 4777777</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>

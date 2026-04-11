@@ -21,14 +21,10 @@
         <div class="collapse navbar-collapse" id="menuPrincipal">
             
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 center-links">
-                <li class="nav-item"><a class="nav-link" href="#">Calzado</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Nuevos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Mujeres</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Hombres</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Niños</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Colecciones</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Outlet</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sobre nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
             </ul>
 
             <div class="d-flex align-items-center right-actions gap-4">

@@ -29,7 +29,7 @@
 .btn-search {
     background-color: transparent;
     color: #ffffff;
-    border: 1px solid #555555; /* Borde gris oscuro */
+    border: 1px solid #ffffff; /* Borde gris oscuro */
     border-radius: 0; /* Quita el redondeo por defecto de Bootstrap */
     padding: 0.4rem 1rem;
     font-size: 14px;
