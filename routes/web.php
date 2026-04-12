@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('inicio');
 });
 
+Route::get('/inicio', function () {
+    return view('inicio');
+});
+
 Route::get('/quienes', function(){
     return view('quienes');
 });

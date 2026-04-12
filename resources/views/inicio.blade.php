@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
+        {{-- <meta charset="UTF-8">: Le dice al navegador que use la codificación de caracteres UTF-8, lo cual es vital para que las tildes (á, é) y la letra 'ñ' se vean correctamente. --}}
+        <meta charset="UTF-8">
+        
+        {{-- <meta name="viewport"...>: Esencial para el diseño responsivo. Hace que la página web adapte su ancho al tamaño de la pantalla del dispositivo (celular, tablet, etc.). --}}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        {{-- <meta http-equiv="X-UA-Compatible"...>: Fuerza a Internet Explorer a usar su motor de renderizado más reciente (Edge). --}}
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {{-- Carga los estilos principales de Bootstrap --}}
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
         <title>Tillas</title>
-        <link rel="stylesheet" href="css/style-carrusel.css">
+        <link rel="icon" href="{{ asset('imagenes/Logo-blanco.ico') }}" type="image/x-icon">
+        {{-- Carga tus estilos personalizados --}}
         <link rel="stylesheet" href="css/style-inicio.css">
     </head>
     <body>
+        {{-- Carga los scripts de Bootstrap (necesarios para que funcionen menús desplegables y carruseles) --}}
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
         {{-- Barra de Navegacion --}}
+        {{-- Componente de Blade que inyecta el código de tu barra de navegación --}}
         <x-navbar/>
 
         {{-- Carrusel --}}
-
+        {{-- Componente de Blade que inyecta tu carrusel principal --}}
         <x-carousel/>
 
         {{-- Sección de Beneficios --}}
+        {{-- container: Centra el contenido y le da márgenes laterales. 
+             py-5: Padding (relleno) vertical (arriba y abajo). 
+             border-bottom: Agrega una línea divisoria abajo. --}}
         <section class="container py-5 my-3 border-bottom">
+            {{-- row: Crea una fila. 
+                 g-4: Agrega una separación (gap) entre las columnas. 
+                 text-center: Centra todo el texto. --}}
             <div class="row g-4 text-center">
                 
+                {{-- col-6: En celulares (pantallas extra chicas), ocupa la mitad (6 de 12 espacios = 2 por fila).
+                     col-md-3: En tablets y computadoras, ocupa un cuarto (3 de 12 espacios = 4 por fila). --}}
                 <div class="col-6 col-md-3 feature-box">
                     <i class="bi bi-truck fs-1 mb-3 d-block"></i>
                     <h6 class="fw-bold mb-1">ENVÍOS A TODO EL PAÍS</h6>
@@ -49,12 +69,19 @@
 
         {{-- Sección de Categorias --}} 
         <section class="container py-5 my-2">
+            {{-- fw-bold: Texto en negrita. text-uppercase: Convierte a MAYÚSCULAS. mb-4: Margen hacia abajo. --}}
             <h3 class="text-center fw-bold mb-4 text-uppercase">Compra por Categoría</h3>
             
             <div class="row g-4">
                 <div class="col-6 col-md-3">
+                    {{-- d-block: Hace que el enlace ocupe todo el ancho. 
+                         position-relative: Permite que elementos hijos con 'position-absolute' se posicionen respecto a esta caja. 
+                         overflow-hidden: Oculta cualquier cosa (como un zoom de imagen) que se salga de los bordes redondeados. --}}
                     <a href="/hombres" class="category-card d-block position-relative rounded overflow-hidden">
-                        <img src="{{ asset('imagenes/cat-hombre.jpg') }}" alt="Hombres" class="w-100">
+                        <img src="{{ asset('imagenes/cat-hombre.jpg') }}" alt="Hombres" class="w-100"> {{-- w-100: Imagen al 100% de ancho --}}
+                        
+                        {{-- Esta capa oscura se posiciona sobre la imagen (absolute), abarcando el 100% (top-0, start-0, w-100, h-100).
+                             d-flex, align-items-center, justify-content-center: Flexbox para centrar el texto "Hombres" en el medio de la caja. --}}
                         <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Hombres</h4>
                         </div>
@@ -92,6 +119,7 @@
         
         {{-- Sección de Nuevos Ingresos --}}
         <section class="container py-5">
+            {{-- d-flex justify-content-between: Coloca el título "Nuevos Ingresos" a la izquierda y el enlace "Ver todos" a la extrema derecha. --}}
             <div class="d-flex justify-content-between align-items-end mb-4">
                 <h3 class="fw-bold mb-0 text-uppercase">Nuevos Ingresos</h3>
                 <a href="/tienda" class="text-dark text-decoration-none fw-bold border-bottom border-dark pb-1 small text-uppercase tracking-wide">Ver todos</a>
@@ -99,10 +127,18 @@
             
             <div class="row g-4">
                 
+                {{-- Responsive de Productos: 
+                     col-12: En celulares ocupa 1 sola columna.
+                     col-md-6: En tablets ocupa la mitad (2 columnas).
+                     col-lg-3: En PCs ocupa un cuarto (4 columnas por fila). --}}
                 <div class="col-12 col-md-6 col-lg-3">
+                    {{-- h-100: Hace que todas las tarjetas tengan la misma altura, incluso si un título es más largo que otro. --}}
                     <div class="card product-card border-0 h-100">
                         <div class="position-relative bg-light rounded overflow-hidden">
+                            {{-- position-absolute top-0 start-0: Clava la etiqueta "NUEVO" en la esquina superior izquierda. --}}
                             <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 z-1 px-2 py-1">NUEVO</span>
+                            
+                            {{-- position-absolute top-0 end-0: Clava el botón de corazón en la esquina superior derecha. --}}
                             <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
                                 <i class="bi bi-heart"></i>
                             </button>
@@ -110,6 +146,7 @@
                         </div>
                         <div class="card-body px-0 pb-0">
                             <p class="text-muted small mb-1 text-uppercase tracking-wide">Puma</p>
+                            {{-- fs-6 y fs-5: Controlan el tamaño de fuente (font-size). --}}
                             <h5 class="card-title fw-bold mb-1 fs-6">Puma Velocity Nitro 3</h5>
                             <p class="card-text fw-bold fs-5 mb-3">$125.000</p>
                             <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
@@ -137,6 +174,7 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card product-card border-0 h-100">
                         <div class="position-relative bg-light rounded overflow-hidden">
+                            {{-- Etiqueta de descuento --}}
                             <span class="badge bg-danger text-white position-absolute top-0 start-0 m-3 z-1 px-2 py-1">-15%</span>
                             <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
                                 <i class="bi bi-heart"></i>
@@ -148,6 +186,7 @@
                             <h5 class="card-title fw-bold mb-1 fs-6">Topper Core Mesh</h5>
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <p class="card-text fw-bold fs-5 mb-0">$180.000</p>
+                                {{-- text-decoration-line-through: Tacha el texto (ideal para precios viejos). --}}
                                 <p class="text-decoration-line-through text-muted small mb-0">$211.000</p>
                             </div>
                             <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
@@ -176,16 +215,20 @@
         </section>
 
         {{-- Sección de Banner Promocional --}}
+        {{-- container-fluid px-0: Ocupa el 100% de la pantalla de lado a lado sin márgenes (px-0 quita el padding lateral). --}}
         <section class="container-fluid px-0 my-5">
             <div class="promo-banner position-relative d-flex align-items-center justify-content-center text-center">
                 
+                {{-- Capa superpuesta con z-index 1 (z-1) para oscurecer la imagen de fondo. --}}
                 <div class="promo-overlay position-absolute top-0 start-0 w-100 h-100 z-1"></div>
                 
+                {{-- Contenido con z-index 2 (z-2) para asegurar que quede "por encima" de la capa oscura. --}}
                 <div class="promo-content position-relative z-2 text-white p-4">
                     <p class="text-uppercase tracking-wide fw-bold mb-2 text-light">Edición Limitada</p>
                     <h2 class="display-4 fw-bold text-uppercase tracking-wide mb-3">Semana de las Marcas</h2>
                     <p class="fs-5 mb-4">Descubre lo mejor de <span class="fw-bold text-uppercase">Puma</span> y <span class="fw-bold text-uppercase">Topper</span> en un solo lugar.</p>
                     
+                    {{-- flex-column flex-sm-row: En celulares los botones se apilan uno sobre otro. En pantallas pequeñas (sm) o mayores se colocan uno al lado del otro. --}}
                     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mt-4">
                         <a href="/puma" class="btn btn-light fw-bold text-uppercase px-5 py-3 rounded-0 btn-marca">
                             Ver colección Puma
@@ -199,7 +242,7 @@
             </div>
         </section>
 
-        {{--Pie de Pagina--}}
+        {{-- Pie de Pagina --}}
         <x-footer />
     </body>
 </html>
