@@ -17,27 +17,61 @@
 
     <h2 class="fw-bold text-center mb-4">Quiénes Somos</h2>
 
-    <p class="text-center">
-        En Tillas somos una tienda especializada en zapatillas urbanas y deportivas,
-        enfocada en brindar estilo, comodidad y calidad a nuestros clientes.
+    <p class="text-center text-muted mb-5">
+        En Tillas nos dedicamos a ofrecer zapatillas que combinan estilo urbano, comodidad y calidad,
+        pensadas para acompañarte en cada momento del día.
     </p>
 
-    <div class="row mt-5 text-center">
+<div class="row g-4 text-center mb-5">
 
         <div class="col-md-4">
+            <div class="p-4 shadow-sm border rounded">
+            <i class="bi bi-bullseye fs-1 mb-3"></i>
             <h5 class="fw-bold">Misión</h5>
-            <p>Ofrecer productos de calidad con diseño moderno.</p>
+            <p class="text-muted">
+                Brindar productos de alta calidad que se adapten a las tendencias actuales,
+                garantizando confort y durabilidad en cada paso.
+            </p>
+            </div>
         </div>
 
         <div class="col-md-4">
+            <div class="p-4 shadow-sm border rounded">
+            <i class="bi bi-eye fs-1 mb-3"></i>
             <h5 class="fw-bold">Visión</h5>
-            <p>Ser referentes en moda urbana.</p>
+            <p class="text-muted">
+                Ser reconocidos como una de las principales tiendas de zapatillas urbanas
+                a nivel nacional, destacándonos por nuestro servicio y calidad.
+            </p>
+            </div>
         </div>
 
         <div class="col-md-4">
+            <div class="p-4 shadow-sm border rounded">
+            <i class="bi bi-eye fs-1 mb-3"></i>
             <h5 class="fw-bold">Valores</h5>
-            <p>Calidad, confianza y estilo.</p>
+            <p class="text-muted">
+                Compromiso con el cliente, innovación constante, responsabilidad y pasión
+                por la moda urbana.
+            </p>
+            </div>
         </div>
+
+</div>
+    <div class="p-4 shadow-sm border rounded text-center">
+
+        <h5 class="fw-bold mb-3">Nuestra Historia</h5>
+
+        <p class="text-muted">
+            Tillas nace como un emprendimiento enfocado en brindar una experiencia de compra
+            simple, segura y moderna. Desde nuestros inicios, buscamos acercar a nuestros clientes
+            productos de calidad que reflejen su estilo personal.
+        </p>
+
+        <p class="text-muted">
+            Con el paso del tiempo, fuimos creciendo y ampliando nuestro catálogo, incorporando
+            nuevas marcas y tendencias del mundo urbano y deportivo.
+        </p>
 
     </div>
 

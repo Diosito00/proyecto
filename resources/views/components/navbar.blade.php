@@ -22,8 +22,8 @@
             
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 center-links">
                 <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="/comercializacion">Tienda</a></li>
-                <li class="nav-item"><a class="nav-link" href="/quienes">Sobre nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="/comercializacion">Comercialización</a></li>
+                <li class="nav-item"><a class="nav-link" href="/quienes">Quienes somos</a></li>
                 <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
             </ul>
 

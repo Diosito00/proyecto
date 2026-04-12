@@ -6,27 +6,39 @@
 
     <h2 class="fw-bold text-center mb-4">Contacto</h2>
 
-    <div class="row">
+    <p class="text-center text-muted mb-5">
+        Si tenés alguna consulta, podés comunicarte con nosotros a través de los siguientes medios.
+    </p>
 
-        <div class="col-md-6">
-            <p><strong>Empresa:</strong> Tillas</p>
-            <p><strong>Email:</strong> info@tillas.com</p>
-            <p><strong>Teléfono:</strong> +54 379 4777777</p>
+    <div class="row g-4">
+        <div class="col-md-5">
+            <div class="p-4 shadow-sm border rounded">
+                <h5 class="fw-bold mb-3">Información de contacto</h5>
+                <p><i class="bi bi-building me-2"></i>Tillas</p>
+                <p><i class="bi bi-envelope me-2"></i>info@tillas.com</p>
+                <p><i class="bi bi-phone me-2"></i>+54 379 4777777</p>
+                <p><i class="bi bi-geo-alt me-2"></i>Corrientes, Argentina</p>
+                
+                    <p class="text-muted mt-3">
+                    Nuestro equipo responderá a la brevedad todas tus consultas.
+                    </p>
+
+            </div>
+
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-7">
+            <div class="p-4 shadow-sm border rounded">
+                <h5 class="fw-bold mb-3">Enviar mensaje</h5>
 
-            <form>
-
-                <input type="text" class="form-control mb-3" placeholder="Nombre">
-
-                <input type="email" class="form-control mb-3" placeholder="Email">
-
-                <textarea class="form-control mb-3" placeholder="Mensaje"></textarea>
-
-                <button class="btn btn-dark w-100">Enviar</button>
-
-            </form>
+                    <form>
+                        <input type="text" class="form-control mb-3" placeholder="Nombre completo">
+                        <input type="email" class="form-control mb-3" placeholder="Email" required>
+                        <textarea class="form-control mb-3" placeholder="Escribí tu mensaje" required></textarea>
+                        <button class="btn btn-dark w-100">Enviar</button>
+                    </form>
+                
+            </div>
 
         </div>
 
