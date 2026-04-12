@@ -22,3 +22,6 @@ Route::get('/terminos', function(){
     return view('terminos');
 });
 
+Route::get('/privacidad', function(){
+    return view('privacidad');
+});

@@ -74,8 +74,8 @@
         <div class="footer-bottom">
             <span>&copy; {{ date('Y') }} Tillas. Todos los derechos reservados.</span>
             <div class="d-flex gap-3">
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Términos de Servicio</a>
+                <a href="/privacidad">Política de Privacidad</a>
+                <a href="/terminos">Términos de Servicio</a>
             </div>
         </div>
     </div>
