@@ -139,9 +139,9 @@
                             <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 z-1 px-2 py-1">NUEVO</span>
                             
                             {{-- position-absolute top-0 end-0: Clava el botón de corazón en la esquina superior derecha. --}}
-                            <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
-                                <i class="bi bi-heart"></i>
-                            </button>
+                            {{-- <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
+                                <i class="bi bi-heart"></i> 
+                            </button> --}}
                             <img src="{{ asset('imagenes/Puma-v-n-3.jpg') }}" class="card-img-top product-img" alt="Puma Velocity">
                         </div>
                         <div class="card-body px-0 pb-0">
@@ -157,9 +157,9 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card product-card border-0 h-100">
                         <div class="position-relative bg-light rounded overflow-hidden">
-                            <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
-                                <i class="bi bi-heart"></i>
-                            </button>
+                            {{-- <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
+                                <i class="bi bi-heart"></i> 
+                            </button> --}}
                             <img src="{{ asset('imagenes/Puma-Salehe-b-v-n-u.jpg') }}" class="card-img-top product-img" alt="Nike Air Zoom">
                         </div>
                         <div class="card-body px-0 pb-0">
@@ -176,9 +176,9 @@
                         <div class="position-relative bg-light rounded overflow-hidden">
                             {{-- Etiqueta de descuento --}}
                             <span class="badge bg-danger text-white position-absolute top-0 start-0 m-3 z-1 px-2 py-1">-15%</span>
-                            <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
-                                <i class="bi bi-heart"></i>
-                            </button>
+                            {{-- <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
+                                <i class="bi bi-heart"></i> 
+                            </button> --}}
                             <img src="{{ asset('imagenes/Topper-c-m.jpg') }}" class="card-img-top product-img" alt="Adidas Ultraboost">
                         </div>
                         <div class="card-body px-0 pb-0">
@@ -197,9 +197,9 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card product-card border-0 h-100">
                         <div class="position-relative bg-light rounded overflow-hidden">
-                            <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
+                            {{-- <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
                                 <i class="bi bi-heart"></i>
-                            </button>
+                            </button> --}}
                             <img src="{{ asset('imagenes/Topper-f-2.jpg') }}" class="card-img-top product-img" alt="New Balance 550">
                         </div>
                         <div class="card-body px-0 pb-0">

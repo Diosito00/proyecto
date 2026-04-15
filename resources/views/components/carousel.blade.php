@@ -41,18 +41,55 @@
             
             {{-- carousel-item: Define una "diapositiva" individual.
                 active: ¡MUY IMPORTANTE! Al menos un item debe tener esta clase, de lo contrario el carrusel entero será invisible al cargar la página. --}}
-            <div class="carousel-item active">
+            <div class="carousel-item active position-relative">
                 {{-- d-block: (display: block) Evita comportamientos raros de espaciado que tienen las imágenes por defecto en HTML.
                     w-100: (width: 100%) Fuerza a la imagen a ocupar todo el ancho disponible del contenedor. --}}
-                <img src="{{ asset('imagenes/img_slide1.jpg') }}" class="d-block w-100" alt="Slide 1">
+                <img src="{{ asset('imagenes/slide1.jpg') }}" class="d-block w-100" alt="Puma Otoño Invierno">
+                {{-- Capa oscura opcional para que el texto blanco resalte mejor sobre la foto del parque --}}
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.3);"></div>
+
+                <div class="carousel-caption d-none d-md-block text-start mb-5 z-2">
+                    <h6 class="text-uppercase tracking-wide mb-2 text-light">Nueva Temporada</h6>
+                    <h2 class="display-4 fw-bold mb-3 text-white">PUMA OTOÑO-INVIERNO</h2>
+                    <p class="fs-5 text-white mb-4">No dejes que el clima te detenga. Descubrí lo último en tecnología y confort para tu entrenamiento.</p>
+                    <a href="/puma" class="btn btn-light rounded-0 px-4 py-2 fw-bold text-uppercase">Ver Colección Puma</a>
+                </div>
             </div>
             
-            <div class="carousel-item">
-                <img src="{{ asset('imagenes/img1.jpg') }}" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-item position-relative">
+                <img src="{{ asset('imagenes/slide2.jpg') }}" class="d-block w-100" alt="Semana Topper">
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.3);"></div>
+        
+                <div class="carousel-caption d-none d-md-block text-start mb-5 z-2">
+                    <h6 class="text-uppercase tracking-wide mb-2 text-warning">Oportunidad Única</h6>
+                    <h2 class="display-4 fw-bold mb-3 text-white">SEMANA TOPPER</h2>
+                    <p class="fs-5 text-white mb-4">Renová tus Tillas hoy. Aprovechá hasta 6 cuotas sin interés en modelos seleccionados.</p>
+                    <a href="/topper" class="btn btn-warning rounded-0 px-4 py-2 fw-bold text-uppercase text-dark">Aprovechar Cuotas</a>
+                </div>
             </div>
             
-            <div class="carousel-item">
-                <img src="{{ asset('imagenes/img2.jpg') }}" class="d-block w-100" alt="Slide 3">
+            {{-- SLIDE 3: ENFOQUE EN VELOCIDAD Y MOTIVACIÓN (OPCIÓN B) --}}
+            <div class="carousel-item position-relative">
+                {{-- Imagen de fondo generada para el slide 3 --}}
+                <img src="{{ asset('imagenes/slide3.jpg') }}" class="d-block w-100" alt="Colección Running Tillas">
+                
+                {{-- Capa de oscurecimiento sutil: Ayuda a que el texto blanco resalte sobre los reflejos del agua y el cielo --}}
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.25);"></div>
+                
+                {{-- Contenido del Slide: Alineado a la izquierda (text-start) para aprovechar el espacio vacío en la foto --}}
+                <div class="carousel-caption d-none d-md-block text-start mb-5 z-2">
+                    {{-- Etiqueta pequeña en color celeste (text-info) para combinar con los tonos del agua --}}
+                    <h6 class="text-uppercase tracking-wide mb-2 text-info">Colección Running</h6>
+                    
+                    {{-- Título con tipografía de gran tamaño y negrita --}}
+                    <h2 class="display-4 fw-bold mb-3 text-white">ENCONTRÁ TU RITMO</h2>
+                    
+                    {{-- Descripción persuasiva --}}
+                    <p class="fs-5 text-white mb-4">Diseño aerodinámico y tracción perfecta. El calzado que necesitás para superar tu mejor marca.</p>
+                    
+                    {{-- Botón con borde blanco, elegante y minimalista --}}
+                    <a href="/running" class="btn btn-outline-light rounded-0 px-4 py-2 fw-bold text-uppercase">Ver Zapatillas Running</a>
+                </div>
             </div>
         </div>
         

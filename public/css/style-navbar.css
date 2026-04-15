@@ -22,34 +22,36 @@
 
 /* Efecto al pasar el mouse por los enlaces */
 .center-links .nav-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
     color: #a0a0a0 !important;
 }
 
 /* Estilo de la caja de BUSCAR */
-.btn-search {
+/* .btn-search {
     background-color: transparent;
     color: #ffffff;
-    border: 1px solid #ffffff; /* Borde gris oscuro */
-    border-radius: 0; /* Quita el redondeo por defecto de Bootstrap */
+    border: 1px solid #ffffff; /* Borde gris oscuro 
+    border-radius: 0; /* Quita el redondeo por defecto de Bootstrap
     padding: 0.4rem 1rem;
     font-size: 14px;
     font-weight: 600;
     transition: all 0.2s;
-}
+} */
 
-.btn-search:hover {
-    border-color: #ffffff; /* El borde se ilumina al pasar el mouse */
+/* .btn-search:hover {
+    border-color: #ffffff; /* El borde se ilumina al pasar el mouse 
     color: #ffffff;
-}
+} */
 
 /* Estilo de los iconos (Corazón, Carrito, Usuario) */
-.nav-icons a {
+/*.nav-icons a {
     color: #ffffff;
-    font-size: 1.2rem; /* Tamaño de los iconos */
+    font-size: 1.2rem; /* Tamaño de los iconos
     text-decoration: none;
     transition: color 0.2s;
-}
+}*/
 
-.nav-icons a:hover {
+/*.nav-icons a:hover {
     color: #a0a0a0;
-}
+} */

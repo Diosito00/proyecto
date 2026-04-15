@@ -34,7 +34,7 @@
             <img src="{{ asset('imagenes/Logo-blanco.png') }}" alt="Logo" height="35">
         </a>
 
-        {{-- BOTÓN HAMBURGUESA (Solo visible en celulares y tablets)
+        {{-- BOTÓN   (Solo visible en celulares y tablets)
              navbar-toggler: Estiliza el botón.
              data-bs-toggle="collapse": Le indica al JavaScript de Bootstrap que este botón activa un elemento colapsable.
              data-bs-target="#menuPrincipal": Conecta este botón con el <div> que tiene el ID "menuPrincipal" (que contiene los enlaces). --}}
@@ -57,31 +57,31 @@
                     {{-- nav-link: Le da estilo de enlace de navegación (color, efecto al pasar el mouse, área de clic ampliada). --}}
                     <a class="nav-link" href="/">Inicio</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="/comercializacion">Comercialización</a></li>
-                <li class="nav-item"><a class="nav-link" href="/quienes">Quienes somos</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link fs-6 {{  request()->is('comercializacion') ? 'active' : '' }}" href="/comercializacion">Comercialización</a></li>
+                <li class="nav-item"><a class="nav-link fs-6 {{  request()->is('quienes') ? 'active' : '' }}" href="/quienes">Quienes somos</a></li>
+                <li class="nav-item"><a class="nav-link fs-6 {{  request()->is('contacto') ? 'active' : '' }}" href="/contacto">Contacto</a></li>
             </ul>
 
             {{-- ACCIONES DE LA DERECHA (Buscar, Carrito, Usuario)
                  d-flex: Activa Flexbox. Alinea los elementos en una fila.
                  align-items-center: Centra los elementos verticalmente para que la lupa, el texto y los íconos queden a la misma altura.
                  gap-4: Agrega una separación uniforme entre el botón de buscar y el grupo de íconos. --}}
-            <div class="d-flex align-items-center right-actions gap-4">
+            {{-- <div class="d-flex align-items-center right-actions gap-4">
                 
-                {{-- Botón de Búsqueda --}}
+                {{-- Botón de Búsqueda 
                 <button class="btn btn-search d-flex align-items-center gap-2">
                     <i class="bi bi-search"></i>
                     <span>BUSCAR</span>
                 </button>
 
-                {{-- Íconos (Favoritos, Carrito, Perfil) --}}
+                {{-- Íconos (Favoritos, Carrito, Perfil)
                 <div class="d-flex align-items-center gap-4 nav-icons">
                     <a href="#"><i class="bi bi-heart"></i></a>
                     <a href="#"><i class="bi bi-cart2"></i></a>
                     <a href="#"><i class="bi bi-person"></i></a>
                 </div>
                 
-            </div>
+            </div> --}}
         </div>
     </div>
 </nav>
