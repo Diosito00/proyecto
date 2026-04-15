@@ -230,7 +230,7 @@
                     
                     {{-- flex-column flex-sm-row: En celulares los botones se apilan uno sobre otro. En pantallas pequeñas (sm) o mayores se colocan uno al lado del otro. --}}
                     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mt-4">
-                        <a href="/puma" class="btn btn-light fw-bold text-uppercase px-5 py-3 rounded-0 btn-marca">
+                        <a href="/puma" class="btn btn-outline-light fw-bold text-uppercase px-5 py-3 rounded-0 btn-marca">
                             Ver colección Puma
                         </a>
                         <a href="/topper" class="btn btn-outline-light fw-bold text-uppercase px-5 py-3 rounded-0 btn-marca">

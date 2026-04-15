@@ -14,7 +14,7 @@
         <div class="col-md-5">
             <div class="p-4 shadow-sm border rounded">
                 <h5 class="fw-bold mb-3">Información de contacto</h5>
-                <p><i class="bi bi-building me-2"></i>Tillas</p>
+                <p><i class="bi bi-building me-2"></i>Tillas, 126 Calle Y, Corrientes, Argentina</p>
                 <p><i class="bi bi-envelope me-2"></i>info@tillas.com</p>
                 <p><i class="bi bi-phone me-2"></i>+54 379 4777777</p>
                 <p><i class="bi bi-geo-alt me-2"></i>Corrientes, Argentina</p>

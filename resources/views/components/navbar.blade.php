@@ -57,9 +57,9 @@
                     {{-- nav-link: Le da estilo de enlace de navegación (color, efecto al pasar el mouse, área de clic ampliada). --}}
                     <a class="nav-link" href="/">Inicio</a>
                 </li>
-                <li class="nav-item"><a class="nav-link fs-6 {{  request()->is('comercializacion') ? 'active' : '' }}" href="/comercializacion">Comercialización</a></li>
-                <li class="nav-item"><a class="nav-link fs-6 {{  request()->is('quienes') ? 'active' : '' }}" href="/quienes">Quienes somos</a></li>
-                <li class="nav-item"><a class="nav-link fs-6 {{  request()->is('contacto') ? 'active' : '' }}" href="/contacto">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link fs-6" href="/comercializacion">Comercialización</a></li>
+                <li class="nav-item"><a class="nav-link fs-6" href="/quienes">Quienes somos</a></li>
+                <li class="nav-item"><a class="nav-link fs-6" href="/contacto">Contacto</a></li>
             </ul>
 
             {{-- ACCIONES DE LA DERECHA (Buscar, Carrito, Usuario)
