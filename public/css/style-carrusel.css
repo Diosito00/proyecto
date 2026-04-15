@@ -1,5 +1,35 @@
+/* --- Ajustes Responsivos del Carrusel --- */
+
+/* 1. Control de la imagen */
 .carousel-item img {
-    height: 500px; /* Cambia el 500px por la altura que prefieras */
-    object-fit: cover;
-    object-position: center; /* Centra la imagen al recortarla */
+    height: 65vh; /* Ocupa el 65% del alto de la pantalla visible */
+    min-height: 450px; /* Garantiza que nunca sea más bajita que 450px */
+    object-fit: cover; /* Recorta los bordes sobrantes sin deformar la zapatilla */
+    object-position: center; /* Asegura que el centro de la foto siempre se vea */
+}
+
+/* 2. Ajustes de texto solo para celulares (pantallas menores a 768px) */
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 15%; /* Ubica el texto un poco más abajo en móviles */
+        left: 5%;  /* Da un poco de margen lateral */
+        right: 5%;
+    }
+    
+    /* Achicamos el título gigante */
+    .carousel-caption h2 {
+        font-size: 2.2rem !important; 
+    }
+    
+    /* Achicamos el párrafo */
+    .carousel-caption p {
+        font-size: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Hacemos que el botón ocupe todo el ancho en celulares (opcional pero recomendado) */
+    .carousel-caption .btn {
+        width: 100%;
+        display: block;
+    }
 }
