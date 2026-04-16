@@ -76,17 +76,17 @@
                 <div class="d-flex gap-2">
                     
                     {{-- aria-label="...": Esta etiqueta no se ve en la pantalla, pero es leída por los programas para personas con discapacidad visual, indicándoles hacia dónde lleva el enlace, ya que no hay texto visible, solo un ícono. --}}
-                    <a href="#" class="social-link" aria-label="Facebook">
+                    <a href="{{ route('en-proceso') }}" class="social-link" aria-label="Facebook">
                         {{-- fab: Significa "Font Awesome Brands" (para íconos de logotipos de empresas/marcas registradas). --}}
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="social-link" aria-label="Twitter">
+                    <a href="{{ route('en-proceso') }}" class="social-link" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="social-link" aria-label="Instagram">
+                    <a href="{{ route('en-proceso') }}" class="social-link" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="social-link" aria-label="LinkedIn">
+                    <a href="{{ route('en-proceso') }}" class="social-link" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>

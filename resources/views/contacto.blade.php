@@ -31,10 +31,22 @@
             <div class="p-4 shadow-sm border rounded">
                 <h5 class="fw-bold mb-3">Enviar mensaje</h5>
 
-                    <form>
-                        <input type="text" class="form-control mb-3" placeholder="Nombre completo">
-                        <input type="email" class="form-control mb-3" placeholder="Email" required>
-                        <textarea class="form-control mb-3" placeholder="Escribí tu mensaje" required></textarea>
+                    @if(session('success'))
+                    <div class="alert alert-success text-center">
+                        <p class="lead mb-0">
+                            Hola <strong>{{ session('nombre') }}</strong>, qué bueno recibir tu mensaje.
+                            Un miembro del equipo se pondrá en contacto con vos al correo:
+                            <strong>{{ session('email') }}</strong>.
+                            ¡Muchas gracias!
+                        </p>
+                    </div>
+                @endif
+
+                    <form action="{{ route('contacto.enviar') }}" method="POST">
+                        @csrf
+                        <input type="text" name="nombre" class="form-control mb-3" placeholder="Nombre completo">
+                        <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
+                        <textarea name="mensaje" class="form-control mb-3" placeholder="Escribí tu mensaje" required></textarea>
                         <button class="btn btn-dark w-100">Enviar</button>
                     </form>
                 

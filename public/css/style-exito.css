@@ -1,0 +1,33 @@
+body.body-exito {
+    background: linear-gradient(135deg, #f5f5f5, #e9ecef);
+}
+
+.card-exito {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 550px;
+    width: 100%;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.icono-exito {
+    font-size: 4rem;
+    color: #28a745;
+}
+
+.btn-exito {
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

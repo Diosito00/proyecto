@@ -121,7 +121,7 @@
             {{-- d-flex justify-content-between: Coloca el título "Nuevos Ingresos" a la izquierda y el enlace "Ver todos" a la extrema derecha. --}}
             <div class="d-flex justify-content-between align-items-end mb-4">
                 <h3 class="fw-bold mb-0 text-uppercase">Nuevos Ingresos</h3>
-                <a href="/tienda" class="text-dark text-decoration-none fw-bold border-bottom border-dark pb-1 small text-uppercase tracking-wide">Ver todos</a>
+                <a href="{{ route('catalogo') }}" class="text-dark text-decoration-none fw-bold border-bottom border-dark pb-1 small text-uppercase tracking-wide">Ver todos</a>
             </div>
             
             <div class="row g-4">

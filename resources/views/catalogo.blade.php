@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style-catalogo.css">
 </head>
 <body>
-    <x-navbar />
+    <x-navbar/>
 
     {{-- ENCABEZADO Y MIGAS DE PAN (BREADCRUMBS) --}}
     <div class="bg-light py-3 border-bottom">
@@ -160,7 +160,7 @@
     </section>
 
     <x-footer />
-
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 >>>>>>> Stashed changes
 </html>
