@@ -23,5 +23,13 @@
         {{-- Barra de Navegacion --}}
         {{-- Componente de Blade que inyecta el código de tu barra de navegación --}}
         <x-navbar/>
+        
+
+        <h1>CATALOGO EN PROCESO</h1>
+
+
+        <x-footer/>
+
+
     </body>
 </html>

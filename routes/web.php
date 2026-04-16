@@ -29,3 +29,7 @@ Route::get('/terminos', function(){
 Route::get('/privacidad', function(){
     return view('privacidad');
 });
+
+Route::get('/catalogo', function () {
+    return view('catalogo');
+});

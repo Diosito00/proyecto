@@ -77,7 +77,7 @@
                     {{-- d-block: Hace que el enlace ocupe todo el ancho. 
                          position-relative: Permite que elementos hijos con 'position-absolute' se posicionen respecto a esta caja. 
                          overflow-hidden: Oculta cualquier cosa (como un zoom de imagen) que se salga de los bordes redondeados. --}}
-                    <a href="/hombres" class="category-card d-block position-relative rounded overflow-hidden">
+                    <a href="/catalogo#hombres" class="category-card d-block position-relative rounded overflow-hidden">
                         <img src="{{ asset('imagenes/cat-hombre.jpg') }}" alt="Hombres" class="w-100"> {{-- w-100: Imagen al 100% de ancho --}}
                         
                         {{-- Esta capa oscura se posiciona sobre la imagen (absolute), abarcando el 100% (top-0, start-0, w-100, h-100).
@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="col-6 col-md-3">
-                    <a href="/mujeres" class="category-card d-block position-relative rounded overflow-hidden">
+                    <a href="/catalogo#mujeres" class="category-card d-block position-relative rounded overflow-hidden">
                         <img src="{{ asset('imagenes/cat-mujer.jpg') }}" alt="Mujeres" class="w-100">
                         <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Mujeres</h4>
@@ -98,7 +98,7 @@
                 </div>
 
                 <div class="col-6 col-md-3">
-                    <a href="/ninos" class="category-card d-block position-relative rounded overflow-hidden">
+                    <a href="/catalogo#ninos" class="category-card d-block position-relative rounded overflow-hidden">
                         <img src="{{ asset('imagenes/cat-ninos.jpg') }}" alt="Niños" class="w-100">
                         <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Niños</h4>
@@ -107,7 +107,7 @@
                 </div>
 
                 <div class="col-6 col-md-3">
-                    <a href="/deportes" class="category-card d-block position-relative rounded overflow-hidden">
+                    <a href="/catalogo#deportes" class="category-card d-block position-relative rounded overflow-hidden">
                         <img src="{{ asset('imagenes/cat-deportes.jpg') }}" alt="Deportes" class="w-100">
                         <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Deportes</h4>
