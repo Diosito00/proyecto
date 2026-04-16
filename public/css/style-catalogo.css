@@ -1,0 +1,80 @@
+/* ==========================================
+   ESTILOS DEL CATÁLOGO - TILLAS
+   ========================================== */
+
+/* --- 1. Migas de Pan (Breadcrumbs) --- */
+.breadcrumb-item a:hover {
+    text-decoration: underline !important;
+    color: #000 !important;
+}
+
+/* --- 2. Barra Lateral de Filtros (Sidebar) --- */
+
+/* Personalizamos las casillas de verificación (checkboxes) */
+.form-check-input {
+    cursor: pointer;
+    border-radius: 0 !important; /* Hacemos la cajita cuadrada, más elegante */
+}
+
+/* Cuando el usuario marca la casilla (cambiamos el azul de Bootstrap por negro) */
+.form-check-input:checked {
+    background-color: #212529;
+    border-color: #212529;
+}
+
+/* Quitamos el borde azul brillante (focus ring) cuando se hace clic en la casilla */
+.form-check-input:focus {
+    box-shadow: none;
+    border-color: #212529;
+}
+
+/* Efecto al pasar el mouse sobre el texto de los filtros */
+.form-check-label {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.form-check-label:hover {
+    color: #212529 !important; /* El texto se oscurece al pasar el ratón */
+}
+
+
+/* --- 3. Barra Superior (Ordenamiento) --- */
+
+/* Quitamos el borde azul brillante al hacer clic en el menú desplegable (Select) */
+.form-select:focus {
+    box-shadow: none;
+    border-color: #212529;
+}
+
+
+/* --- 4. Paginación Minimalista --- */
+
+/* Separamos un poco los botones y les damos el estilo de la marca */
+.pagination .page-link {
+    color: #212529;
+    border: 1px solid #dee2e6;
+    margin: 0 3px; /* Pequeño espacio entre los números */
+    transition: all 0.3s;
+}
+
+/* Estilo para la página actual (el número en el que estamos) */
+.pagination .page-item.active .page-link {
+    background-color: #212529;
+    border-color: #212529;
+    color: #fff;
+}
+
+/* Efecto al pasar el mouse por los números */
+.pagination .page-link:hover {
+    background-color: #f8f9fa;
+    color: #000;
+    border-color: #212529;
+}
+
+/* Estilo para los botones deshabilitados (ej. "Anterior" en la página 1) */
+.pagination .page-item.disabled .page-link {
+    color: #adb5bd;
+    background-color: #fff;
+    border-color: #dee2e6;
+}

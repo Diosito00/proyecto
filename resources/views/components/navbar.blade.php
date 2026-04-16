@@ -55,8 +55,9 @@
                 {{-- <li>: List Item. Cada elemento de la lista. nav-item: Margen para elementos de la navbar. --}}
                 <li class="nav-item">
                     {{-- nav-link: Le da estilo de enlace de navegación (color, efecto al pasar el mouse, área de clic ampliada). --}}
-                    <a class="nav-link" href="/">Inicio</a>
+                    <a class="nav-link fs-6" href="/">Inicio</a>
                 </li>
+                <li class="nav-item"><a class="nav-link fs-6" href="/catalogo">Catalogo</a></li>
                 <li class="nav-item"><a class="nav-link fs-6" href="/comercializacion">Comercialización</a></li>
                 <li class="nav-item"><a class="nav-link fs-6" href="/quienes">Quienes somos</a></li>
                 <li class="nav-item"><a class="nav-link fs-6" href="/contacto">Contacto</a></li>

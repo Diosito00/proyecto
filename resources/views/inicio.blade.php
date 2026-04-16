@@ -23,7 +23,6 @@
         {{-- Barra de Navegacion --}}
         {{-- Componente de Blade que inyecta el código de tu barra de navegación --}}
         <x-navbar/>
-
         {{-- Carrusel --}}
         {{-- Componente de Blade que inyecta tu carrusel principal --}}
         <x-carousel/>
@@ -77,7 +76,7 @@
                     {{-- d-block: Hace que el enlace ocupe todo el ancho. 
                          position-relative: Permite que elementos hijos con 'position-absolute' se posicionen respecto a esta caja. 
                          overflow-hidden: Oculta cualquier cosa (como un zoom de imagen) que se salga de los bordes redondeados. --}}
-                    <a href="/catalogo#hombres" class="category-card d-block position-relative rounded overflow-hidden">
+                    <a href="{{ route('catalogo', ['categorias' => ['hombre']]) }}" class="category-card d-block position-relative rounded overflow-hidden">
                         <img src="{{ asset('imagenes/cat-hombre.jpg') }}" alt="Hombres" class="w-100"> {{-- w-100: Imagen al 100% de ancho --}}
                         
                         {{-- Esta capa oscura se posiciona sobre la imagen (absolute), abarcando el 100% (top-0, start-0, w-100, h-100).
@@ -89,7 +88,7 @@
                 </div>
 
                 <div class="col-6 col-md-3">
-                    <a href="/catalogo#mujeres" class="category-card d-block position-relative rounded overflow-hidden">
+                    <a href="{{ route('catalogo', ['categorias' => ['mujer']]) }}" class="category-card d-block position-relative rounded overflow-hidden">
                         <img src="{{ asset('imagenes/cat-mujer.jpg') }}" alt="Mujeres" class="w-100">
                         <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Mujeres</h4>
@@ -98,7 +97,7 @@
                 </div>
 
                 <div class="col-6 col-md-3">
-                    <a href="/catalogo#ninos" class="category-card d-block position-relative rounded overflow-hidden">
+                    <a href="{{ route('catalogo', ['categorias' => ['nino']]) }}" class="category-card d-block position-relative rounded overflow-hidden">
                         <img src="{{ asset('imagenes/cat-ninos.jpg') }}" alt="Niños" class="w-100">
                         <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Niños</h4>
@@ -107,7 +106,7 @@
                 </div>
 
                 <div class="col-6 col-md-3">
-                    <a href="/catalogo#deportes" class="category-card d-block position-relative rounded overflow-hidden">
+                    <a href="{{ route('catalogo', ['deportes' => ['running']]) }}" class="category-card d-block position-relative rounded overflow-hidden">
                         <img src="{{ asset('imagenes/cat-deportes.jpg') }}" alt="Deportes" class="w-100">
                         <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Deportes</h4>
@@ -230,10 +229,10 @@
                     
                     {{-- flex-column flex-sm-row: En celulares los botones se apilan uno sobre otro. En pantallas pequeñas (sm) o mayores se colocan uno al lado del otro. --}}
                     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mt-4">
-                        <a href="/puma" class="btn btn-outline-light fw-bold text-uppercase px-5 py-3 rounded-0 btn-marca">
+                        <a href="{{ route('catalogo', ['marcas' => ['puma']]) }}" class="btn btn-outline-light fw-bold text-uppercase px-5 py-3 rounded-0 btn-marca">
                             Ver colección Puma
                         </a>
-                        <a href="/topper" class="btn btn-outline-light fw-bold text-uppercase px-5 py-3 rounded-0 btn-marca">
+                        <a href="{{ route('catalogo', ['marcas' => ['topper']]) }}" class="btn btn-outline-light fw-bold text-uppercase px-5 py-3 rounded-0 btn-marca">
                             Ver colección Topper
                         </a>
                     </div>

@@ -57,7 +57,7 @@
                     <h6 class="text-uppercase tracking-wide mb-2 text-light">Nueva Temporada</h6>
                     <h2 class="display-4 fw-bold mb-3 text-white">PUMA OTOÑO-INVIERNO</h2>
                     <p class="fs-5 text-white mb-4">No dejes que el clima te detenga. Descubrí lo último en tecnología y confort para tu entrenamiento.</p>
-                    <a href="/puma" class="btn btn-light rounded-0 px-4 py-2 fw-bold text-uppercase">Ver Colección Puma</a>
+                    <a href="{{ route('catalogo', ['marcas' => ['puma']]) }}" class="btn btn-light rounded-0 px-4 py-2 fw-bold text-uppercase">Ver Colección Puma</a>
                 </div>
             </div>
             
@@ -73,7 +73,7 @@
                     <p class="fs-5 text-white mb-4">Renová tus Tillas hoy. Aprovechá hasta 6 cuotas sin interés en modelos seleccionados.</p>
                     
                     {{-- btn-warning: Crea un botón amarillo que llama a la acción para las cuotas. --}}
-                    <a href="/topper" class="btn btn-warning rounded-0 px-4 py-2 fw-bold text-uppercase text-dark">Aprovechar Cuotas</a>
+                    <a href="{{ route('catalogo', ['marcas' => ['topper']]) }}" class="btn btn-warning rounded-0 px-4 py-2 fw-bold text-uppercase text-dark">Aprovechar Cuotas</a>
                 </div>
             </div>
             
@@ -91,7 +91,7 @@
                     <p class="fs-5 text-white mb-4">Diseño aerodinámico y tracción perfecta. El calzado que necesitás para superar tu mejor marca.</p>
                     
                     {{-- btn-outline-light: Un botón elegante transparente con borde blanco. --}}
-                    <a href="/running" class="btn btn-outline-light rounded-0 px-4 py-2 fw-bold text-uppercase">Ver Zapatillas Running</a>
+                    <a href="{{ route('catalogo', ['deportes' => ['running']]) }}" class="btn btn-outline-light rounded-0 px-4 py-2 fw-bold text-uppercase">Ver Zapatillas Running</a>
                 </div>
             </div>
         </div>

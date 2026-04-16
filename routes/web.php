@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('inicio');
@@ -30,6 +31,8 @@ Route::get('/privacidad', function(){
     return view('privacidad');
 });
 
-Route::get('/catalogo', function () {
+Route::get('/catalogo', function(){
     return view('catalogo');
 });
+
+Route::get('/catalogo', [ProductController::class, 'index'])->name('catalogo');
