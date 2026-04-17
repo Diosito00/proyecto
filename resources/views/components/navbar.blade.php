@@ -19,7 +19,6 @@
     {{-- Tus estilos personalizados específicos para la barra de navegación --}}
     <link rel="stylesheet" href="css/style-navbar.css">
 </head>
-
 {{-- <nav>: Etiqueta semántica HTML5 específica para bloques de navegación principal.
      navbar: Clase base de Bootstrap para crear la barra.
      navbar-expand-lg: ¡Clave para el modo responsivo! Le dice a la barra que se muestre completa (expandida) en pantallas Grandes (lg - Laptops/PCs) y que se colapse (modo menú hamburguesa) en pantallas más pequeñas (Tablets/Celulares). --}}
@@ -30,8 +29,12 @@
     <div class="container-fluid px-4"> 
         
         {{-- navbar-brand: Clase especial para el logo o nombre de la marca. Bootstrap le da un tamaño y espaciado predeterminado perfecto. --}}
-        <a class="navbar-brand" href="/">
-            <img src="{{ asset('imagenes/Logo-blanco.png') }}" alt="Logo" height="35">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+            {{-- El ícono de tu página --}}
+            <img src="{{ asset('imagenes/Logo-blanco.png') }}" alt="Ícono Tillas" width="35" height="35" class="d-inline-block align-text-top">
+            
+            {{-- El texto de la marca --}}
+            <span class="fw-bold text-uppercase fs-6 tracking-wide text-white">Tillas</span>
         </a>
 
         {{-- BOTÓN   (Solo visible en celulares y tablets)
@@ -57,7 +60,7 @@
                     {{-- nav-link: Le da estilo de enlace de navegación (color, efecto al pasar el mouse, área de clic ampliada). --}}
                     <a class="nav-link fs-6" href="/">Inicio</a>
                 </li>
-                <li class="nav-item"><a class="nav-link fs-6" href="/catalogo">Catalogo</a></li>
+                <li class="nav-item"><a class="nav-link fs-6" href="/catalogo">Catálogo</a></li>
                 <li class="nav-item"><a class="nav-link fs-6" href="/comercializacion">Comercialización</a></li>
                 <li class="nav-item"><a class="nav-link fs-6" href="/quienes">Quienes somos</a></li>
                 <li class="nav-item"><a class="nav-link fs-6" href="/contacto">Contacto</a></li>

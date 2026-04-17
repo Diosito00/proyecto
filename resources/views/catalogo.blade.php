@@ -154,13 +154,10 @@
                 </div>
 
             </main>
-
-        {{-- AQUÍ CERRAMOS EL FORMULARIO --}}
         </form>
     </section>
 
     <x-footer />
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
->>>>>>> Stashed changes
 </html>
