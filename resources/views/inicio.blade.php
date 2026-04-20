@@ -1,63 +1,56 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {{-- <meta charset="UTF-8">: Le dice al navegador que use la codificación de caracteres UTF-8, lo cual es vital para que las tildes (á, é) y la letra 'ñ' se vean correctamente. --}}
         <meta charset="UTF-8">
-        
-        {{-- <meta name="viewport"...>: Esencial para el diseño responsivo. Hace que la página web adapte su ancho al tamaño de la pantalla del dispositivo (celular, tablet, etc.). --}}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         {{-- <meta http-equiv="X-UA-Compatible"...>: Fuerza a Internet Explorer a usar su motor de renderizado más reciente (Edge). --}}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         {{-- Carga los estilos principales de Bootstrap --}}
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+
         <title>Tillas</title>
         <link rel="icon" href="{{ asset('imagenes/Logo-blanco.ico') }}" type="image/x-icon">
-        {{-- Carga tus estilos personalizados --}}
         <link rel="stylesheet" href="css/style-inicio.css">
     </head>
+
     <body>
         {{-- Carga los scripts de Bootstrap (necesarios para que funcionen menús desplegables y carruseles) --}}
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
         {{-- Barra de Navegacion --}}
-        {{-- Componente de Blade que inyecta el código de tu barra de navegación --}}
         <x-navbar/>
         {{-- Carrusel --}}
-        {{-- Componente de Blade que inyecta tu carrusel principal --}}
         <x-carousel/>
 
         {{-- Sección de Beneficios --}}
-        {{-- container: Centra el contenido y le da márgenes laterales. 
-             py-5: Padding (relleno) vertical (arriba y abajo). 
-             border-bottom: Agrega una línea divisoria abajo. --}}
+        <!-- Sección centrada con espacio y línea inferior -->
         <section class="container py-5 my-3 border-bottom">
-            {{-- row: Crea una fila. 
-                 g-4: Agrega una separación (gap) entre las columnas. 
-                 text-center: Centra todo el texto. --}}
+            <!-- Fila con separación entre columnas y contenido centrado -->
             <div class="row g-4 text-center">
-                
-                {{-- col-6: En celulares (pantallas extra chicas), ocupa la mitad (6 de 12 espacios = 2 por fila).
-                     col-md-3: En tablets y computadoras, ocupa un cuarto (3 de 12 espacios = 4 por fila). --}}
+                <!-- Columna responsive: 2 por fila en celular, 4 en pantallas grandes -->
                 <div class="col-6 col-md-3 feature-box">
+                    <!-- Ícono de envío -->
                     <i class="bi bi-truck fs-1 mb-3 d-block"></i>
                     <h6 class="fw-bold mb-1">ENVÍOS A TODO EL PAÍS</h6>
                     <p class="text-muted small mb-0">En compras mayores a $50.000</p>
                 </div>
 
                 <div class="col-6 col-md-3 feature-box">
+                    <!-- Ícono de pago -->
                     <i class="bi bi-credit-card fs-1 mb-3 d-block"></i>
                     <h6 class="fw-bold mb-1">CUOTAS SIN INTERÉS</h6>
                     <p class="text-muted small mb-0">Con tarjetas seleccionadas</p>
                 </div>
 
                 <div class="col-6 col-md-3 feature-box">
+                    <!-- Ícono de cambios -->
                     <i class="bi bi-arrow-repeat fs-1 mb-3 d-block"></i>
                     <h6 class="fw-bold mb-1">CAMBIOS GRATIS</h6>
                     <p class="text-muted small mb-0">Dentro de los 30 días</p>
                 </div>
 
                 <div class="col-6 col-md-3 feature-box">
+                    <!-- Ícono de seguridad -->
                     <i class="bi bi-shield-check fs-1 mb-3 d-block"></i>
                     <h6 class="fw-bold mb-1">COMPRA SEGURA</h6>
                     <p class="text-muted small mb-0">Protegemos tus datos</p>
@@ -68,28 +61,34 @@
 
         {{-- Sección de Categorias --}} 
         <section class="container py-5 my-2">
-            {{-- fw-bold: Texto en negrita. text-uppercase: Convierte a MAYÚSCULAS. mb-4: Margen hacia abajo. --}}
             <h3 class="text-center fw-bold mb-4 text-uppercase">Compra por Categoría</h3>
             
+            <!-- Fila con separación -->
             <div class="row g-4">
+                <!-- Columna responsive -->
                 <div class="col-6 col-md-3">
-                    {{-- d-block: Hace que el enlace ocupe todo el ancho. 
-                         position-relative: Permite que elementos hijos con 'position-absolute' se posicionen respecto a esta caja. 
-                         overflow-hidden: Oculta cualquier cosa (como un zoom de imagen) que se salga de los bordes redondeados. --}}
+
+                    <!-- Enlace que redirige al catálogo con filtro aplicado, route('catalogo') genera la URL automáticamente, ['categorias' => ['hombre']] envía el filtro, Resultado: /catalogo?categorias[]=hombre
+                    d-block: hace que TODO el bloque sea clickeable, position-relative: base para posicionar elementos encima (overlay), rounded: bordes redondeados, overflow-hidden: evita que contenido se salga del contenedor -->
                     <a href="{{ route('catalogo', ['categorias' => ['hombre']]) }}" class="category-card d-block position-relative rounded overflow-hidden">
-                        <img src="{{ asset('imagenes/cat-hombre.jpg') }}" alt="Hombres" class="w-100"> {{-- w-100: Imagen al 100% de ancho --}}
-                        
-                        {{-- Esta capa oscura se posiciona sobre la imagen (absolute), abarcando el 100% (top-0, start-0, w-100, h-100).
-                             d-flex, align-items-center, justify-content-center: Flexbox para centrar el texto "Hombres" en el medio de la caja. --}}
+
+                        <!-- Imagen que representa la categoría src: ruta de la imagen,asset(): genera la URL correcta dentro del proyecto, w-100: hace que la imagen ocupe todo el ancho del contenedor  -->
+                        <img src="{{ asset('imagenes/cat-hombre.jpg') }}" alt="Hombres" class="w-100"> 
+
+                        <!-- Capa que se coloca encima de la imagen, category-overlay: clase personalizada (color, opacidad, efectos), position-absolute: permite posicionar el elemento se posiciona respecto al contenedor padre (que tiene position-relative), top-0 start-0: ubica la capa desde la esquina superior izquierda, w-100 h-100:cubre todo el ancho y alto -->
                         <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Hombres</h4>
                         </div>
                     </a>
                 </div>
 
+                <!-- Columna responsive -->
                 <div class="col-6 col-md-3">
+                    <!-- Enlace al catálogo filtrado por categoría "mujer" Genera: /catalogo?categorias[]=mujer, d-block: toda la tarjeta es clickeable position-relative: base para el overlay ,overflow-hidden: evita desbordes -->
                     <a href="{{ route('catalogo', ['categorias' => ['mujer']]) }}" class="category-card d-block position-relative rounded overflow-hidden">
+                        <!-- Imagen de la categoría, w-100: ocupa todo el ancho -->
                         <img src="{{ asset('imagenes/cat-mujer.jpg') }}" alt="Mujeres" class="w-100">
+                        <!-- Capa que se coloca encima de la imagen, category-overlay: clase personalizada (color, opacidad, efectos), position-absolute: permite posicionar el elemento se posiciona respecto al contenedor padre (que tiene position-relative), top-0 start-0: ubica la capa desde la esquina superior izquierda, w-100 h-100:cubre todo el ancho y alto -->
                         <div class="category-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
                             <h4 class="text-white fw-bold mb-0 text-uppercase tracking-wide">Mujeres</h4>
                         </div>
@@ -126,45 +125,46 @@
             
             <div class="row g-4">
                 
-                {{-- Responsive de Productos: 
-                     col-12: En celulares ocupa 1 sola columna.
-                     col-md-6: En tablets ocupa la mitad (2 columnas).
-                     col-lg-3: En PCs ocupa un cuarto (4 columnas por fila). --}}
+                {{-- Responsive de Productos. --}}
+                <!-- Columna responsive: 1 en celular, 2 en tablet, 4 en desktop -->
                 <div class="col-12 col-md-6 col-lg-3">
-                    {{-- h-100: Hace que todas las tarjetas tengan la misma altura, incluso si un título es más largo que otro. --}}
+                    <!-- Card de producto, border-0: sin borde, h-100: altura completa -->
                     <div class="card product-card border-0 h-100">
+                        <!-- Contenedor de imagen  position-relative: base para elementos encima -->
                         <div class="position-relative bg-light rounded overflow-hidden">
-                            {{-- position-absolute top-0 start-0: Clava la etiqueta "NUEVO" en la esquina superior izquierda. --}}
+                            <!--badge:etiqueta.bg-dark text-white: fondo negro, texto blanco.position-absolute:encima de la imagen. top-0 start-0: arriba izquierda. m-3: margen. z-1: se asegura que esté por encima. -->
                             <span class="badge bg-dark text-white position-absolute top-0 start-0 m-3 z-1 px-2 py-1">NUEVO</span>
-                            
-                            {{-- position-absolute top-0 end-0: Clava el botón de corazón en la esquina superior derecha. --}}
-                            {{-- <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
-                                <i class="bi bi-heart"></i> 
-                            </button> --}}
+                            <!-- Imagen del producto -->
                             <img src="{{ asset('imagenes/Puma-v-n-3.jpg') }}" class="card-img-top product-img" alt="Puma Velocity">
                         </div>
                         <div class="card-body px-0 pb-0">
                             <p class="text-muted small mb-1 text-uppercase tracking-wide">Puma</p>
                             {{-- fs-6 y fs-5: Controlan el tamaño de fuente (font-size). --}}
+                            <!-- Nombre del producto -->
                             <h5 class="card-title fw-bold mb-1 fs-6">Puma Velocity Nitro 3</h5>
                             <p class="card-text fw-bold fs-5 mb-3">$125.000</p>
+                            <!-- Botón de compra -->
                             <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Columna responsive: 1 en celular, 2 en tablet, 4 en desktop -->
                 <div class="col-12 col-md-6 col-lg-3">
+                    <!-- Card de producto, border-0: sin borde, h-100: altura completa -->
                     <div class="card product-card border-0 h-100">
+                        <!-- Contenedor de imagen  position-relative: base para elementos encima -->
                         <div class="position-relative bg-light rounded overflow-hidden">
-                            {{-- <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
-                                <i class="bi bi-heart"></i> 
-                            </button> --}}
+                            <!-- Imagen del producto -->
                             <img src="{{ asset('imagenes/Puma-Salehe-b-v-n-u.jpg') }}" class="card-img-top product-img" alt="Nike Air Zoom">
                         </div>
+                        
                         <div class="card-body px-0 pb-0">
                             <p class="text-muted small mb-1 text-uppercase tracking-wide">Puma</p>
+                            <!-- Nombre del producto -->
                             <h5 class="card-title fw-bold mb-1 fs-6">Puma x Salehe Bembury</h5>
                             <p class="card-text fw-bold fs-5 mb-3">$145.000</p>
+                            <!-- Botón de compra -->
                             <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
                         </div>
                     </div>
@@ -175,9 +175,6 @@
                         <div class="position-relative bg-light rounded overflow-hidden">
                             {{-- Etiqueta de descuento --}}
                             <span class="badge bg-danger text-white position-absolute top-0 start-0 m-3 z-1 px-2 py-1">-15%</span>
-                            {{-- <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
-                                <i class="bi bi-heart"></i> 
-                            </button> --}}
                             <img src="{{ asset('imagenes/Topper-c-m.jpg') }}" class="card-img-top product-img" alt="Adidas Ultraboost">
                         </div>
                         <div class="card-body px-0 pb-0">
@@ -196,9 +193,6 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card product-card border-0 h-100">
                         <div class="position-relative bg-light rounded overflow-hidden">
-                            {{-- <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
-                                <i class="bi bi-heart"></i>
-                            </button> --}}
                             <img src="{{ asset('imagenes/Topper-f-2.jpg') }}" class="card-img-top product-img" alt="New Balance 550">
                         </div>
                         <div class="card-body px-0 pb-0">

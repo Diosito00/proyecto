@@ -1,7 +1,8 @@
 <body>
-
+<!-- Barra de navegación -->
 <x-navbar/>
 
+<!-- Contenedor centrado con espacio vertical -->
 <div class="container py-5">
 
     <h2 class="fw-bold text-center mb-4">Contacto</h2>
@@ -10,8 +11,10 @@
         Si tenés alguna consulta, podés comunicarte con nosotros a través de los siguientes medios.
     </p>
 
+    <!-- Fila con espacio entre columnas -->
     <div class="row g-4">
         <div class="col-md-5">
+            <!-- Tarjeta con padding, borde y sombra -->
             <div class="p-4 shadow-sm border rounded">
                 <h5 class="fw-bold mb-3">Información de contacto</h5>
                 <p><i class="bi bi-building me-2"></i>Tillas, 126 Calle Y, Corrientes, Argentina</p>
@@ -31,7 +34,9 @@
             <div class="p-4 shadow-sm border rounded">
                 <h5 class="fw-bold mb-3">Enviar mensaje</h5>
 
+                    <!-- Si hay mensaje de éxito en sesión -->
                     @if(session('success'))
+                    <!-- Alerta verde -->
                     <div class="alert alert-success text-center">
                         <p class="lead mb-0">
                             Hola <strong>{{ session('nombre') }}</strong>, qué bueno recibir tu mensaje.
@@ -40,13 +45,19 @@
                             ¡Muchas gracias!
                         </p>
                     </div>
-                @endif
+                    @endif
 
+                    <!-- Formulario que envía datos al backend -->
                     <form action="{{ route('contacto.enviar') }}" method="POST">
-                        @csrf
+                        <!-- Protección de seguridad -->
+                        @csrf 
+                        <!-- Campo nombre -->
                         <input type="text" name="nombre" class="form-control mb-3" placeholder="Nombre completo">
+                        <!-- Campo email obligatorio -->
                         <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
+                        <!-- Campo mensaje -->
                         <textarea name="mensaje" class="form-control mb-3" placeholder="Escribí tu mensaje" required></textarea>
+                        <!-- Botón de envío -->
                         <button class="btn btn-dark w-100">Enviar</button>
                     </form>
                 
