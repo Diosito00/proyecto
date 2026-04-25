@@ -10,7 +10,7 @@
 
         <title>Tillas-Comercializacion</title>
         <link rel="icon" href="{{ asset('imagenes/Logo-blanco.ico') }}" type="image/x-icon">
-        <link rel="stylesheet" href="css/style-inicio.css">
+        <link rel="stylesheet" href="css/style-comercializacion.css">
         
     </head>
 
@@ -48,7 +48,7 @@
             <h4 class="fw-bold mb-3">Envíos</h4>
 
             <p class="text-muted small">
-            Realizamos envíos a todo el país mediante servicios de logística confiables,
+            Realizamos <strong>envíos a todo el país</strong> mediante servicios de logística confiables,
             asegurando que tu pedido llegue en tiempo y forma, en perfectas condiciones.
 
             El tiempo de entrega estimado es de 48 a 72 horas hábiles para la mayoría
@@ -67,7 +67,7 @@
             <ul class="text-muted small mt-3">
                 <li>Entrega estimada entre 48 y 72 horas hábiles (puede variar según la zona)</li>
                 <li>Número de seguimiento en tiempo real para controlar tu envío</li>
-                <li>Envío gratis en compras superiores a $50.000</li>
+                <li><strong>Envío gratis</strong> en compras superiores a $50.000</li>
                 <li>Opción de retiro en sucursal o punto de entrega</li>
                 <li>Embalaje seguro y reforzado para proteger el producto durante el traslado</li>
                 <li>Notificaciones por email sobre el estado del pedido</li>
@@ -109,7 +109,7 @@
             <!-- Lista -->
             <ul class="text-muted small">
                 <li>Tarjetas de crédito y débito (Visa, Mastercard, American Express)</li>
-                <li>Hasta 6 cuotas sin interés en productos seleccionados</li>
+                <li>Hasta <strong>6 cuotas sin interés</strong> en productos seleccionados</li>
                 <li>Pagos a través de MercadoPago con múltiples opciones disponibles</li>
                 <li>Transferencia bancaria directa con confirmación manual o automática</li>
                 <li>Billeteras virtuales (Ualá, MercadoPago, entre otras)</li>
@@ -146,7 +146,7 @@
                     <li>El producto debe estar sin uso, en perfecto estado y con su empaque original</li>
                     <li>Primer cambio sin costo adicional (sujeto a condiciones)</li>
                     <li>Posibilidad de cambio por talle, modelo o producto diferente</li>
-                    <li>Devolución del dinero dentro de los 7 días hábiles</li>
+                    <li><strong>Devolución del dinero</strong> dentro de los 7 días hábiles</li>
                     <li>Atención personalizada durante todo el proceso</li>
                     <li>En caso de falla o defecto, el cambio es inmediato sin costo</li>
                 </ul>
@@ -158,39 +158,65 @@
         SECCIÓN EXTRA
     ========================== -->
 
-    <div class="row g-4">
-        <div class="col-md-6">
-            <div class="p-4 border rounded shadow-sm h-100">
-                <h5 class="fw-bold mb-3">¿Cómo comprar?</h5>
-                <ol class="text-muted small">
-                <li>Explorá nuestro catálogo y elegí el producto que más se adapte a tu estilo y necesidad.</li>
-                <li> Ingresá a la ficha del producto, seleccioná el talle correspondiente y la cantidad deseada.</li>
-                <li>Hacé clic en “Agregar al carrito” para sumar el producto a tu compra.</li>
-                <li>Accedé al carrito, revisá los productos seleccionados y confirmá tu pedido.</li>
-                <li>Completá tus datos personales y la dirección de envío para la entrega.</li>
-                <li> Elegí el método de pago que prefieras (tarjeta, transferencia o billetera virtual).</li>
-                <li>Confirmá la compra y recibí un correo con el detalle de tu pedido.</li>
-                <li>Realizá el seguimiento del envío hasta recibir tu producto en tu domicilio.</li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="col-md-6">
-            <div class="p-4 border rounded shadow-sm h-100">
-
-                <h5 class="fw-bold mb-3">Compra Segura</h5>
-
-                <p class="text-muted small">
-                    Todas las transacciones están protegidas mediante protocolos de seguridad SSL,
-                    garantizando la protección de tus datos personales y financieros.
-                </p>
-
-                <div class="d-flex gap-3 mt-3">
-                    <i class="bi bi-shield-check fs-2 text-success"></i>
-                    <i class="bi bi-lock fs-2 text-dark"></i>
+    <div class="row g-4 mb-5">
+        <div class="col-12">
+            <h4 class="fw-bold text-center mb-4">¿Cómo comprar en Tillas?</h4>
+            
+            <div class="row g-3 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="p-4 border rounded shadow-sm h-100 bg-white step-card">
+                        <i class="bi bi-search fs-1 text-dark mb-3 d-block"></i>
+                        <h6 class="fw-bold text-uppercase">1. Elegí</h6>
+                        <p class="text-muted small mb-0">Buscá tus zapas favoritas en nuestro catálogo.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 border rounded shadow-sm h-100 bg-white step-card">
+                        <i class="bi bi-cart3 fs-1 text-dark mb-3 d-block"></i>
+                        <h6 class="fw-bold text-uppercase">2. Agregá</h6>
+                        <p class="text-muted small mb-0">Seleccioná tu talle y sumalas al carrito.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 border rounded shadow-sm h-100 bg-white step-card">
+                        <i class="bi bi-credit-card fs-1 text-dark mb-3 d-block"></i>
+                        <h6 class="fw-bold text-uppercase">3. Pagá</h6>
+                        <p class="text-muted small mb-0">Completá tus datos y aboná de forma segura.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-4 border rounded shadow-sm h-100 bg-white step-card">
+                        <i class="bi bi-box-seam fs-1 text-dark mb-3 d-block"></i>
+                        <h6 class="fw-bold text-uppercase">4. Recibí</h6>
+                        <p class="text-muted small mb-0">¡Listo! Te lo enviamos directo a tu puerta.</p>
+                    </div>
                 </div>
             </div>
-        </div> 
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="p-4 border rounded shadow-sm d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 bg-light">
+                <div class="d-flex gap-3">
+                    <i class="bi bi-shield-check fs-1 text-success"></i>
+                    <i class="bi bi-lock fs-1 text-dark"></i>
+                </div>
+                <div class="text-center text-md-start">
+                    <h5 class="fw-bold mb-1">Compra 100% Segura</h5>
+                    <p class="text-muted small mb-0">Tus datos y transacciones están protegidos con encriptación SSL de extremo a extremo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5 pt-5 border-top">
+        <div class="col-12 text-center">
+            <h3 class="fw-bold mb-3">¿Todo listo para estrenar tus próximas Tillas?</h3>
+            <p class="text-muted mb-4">Descubrí los últimos ingresos y aprovechá nuestras cuotas sin interés.</p>
+            <a href="{{ route('catalogo') }}" class="btn btn-dark btn-lg rounded-0 px-5 fw-bold text-uppercase tracking-wide">
+                Ir a la tienda
+            </a>
+        </div>  
     </div> 
 </div>    
     <x-footer/>
