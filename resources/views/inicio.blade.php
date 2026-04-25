@@ -144,7 +144,7 @@
                             <h5 class="card-title fw-bold mb-1 fs-6">Puma Velocity Nitro 3</h5>
                             <p class="card-text fw-bold fs-5 mb-3">$125.000</p>
                             <!-- Botón de compra -->
-                            <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
+                            <a href="/en-proceso" class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -165,7 +165,7 @@
                             <h5 class="card-title fw-bold mb-1 fs-6">Puma x Salehe Bembury</h5>
                             <p class="card-text fw-bold fs-5 mb-3">$145.000</p>
                             <!-- Botón de compra -->
-                            <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
+                            <a href="/en-proceso" class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -185,7 +185,7 @@
                                 {{-- text-decoration-line-through: Tacha el texto (ideal para precios viejos). --}}
                                 <p class="text-decoration-line-through text-muted small mb-0">$211.000</p>
                             </div>
-                            <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
+                            <a href="/en-proceso" class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                             <p class="text-muted small mb-1 text-uppercase tracking-wide">Topper</p>
                             <h5 class="card-title fw-bold mb-1 fs-6">Topper Fast 2.0</h5>
                             <p class="card-text fw-bold fs-5 mb-3">$160.000</p>
-                            <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
+                            <a href="/en-proceso" class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</a>
                         </div>
                     </div>
                 </div>

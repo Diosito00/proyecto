@@ -47,8 +47,8 @@
         </div>
 
         <div class="col-md-4">
-            <div class="p-4 shadow-sm border rounded">
-            <i class="bi bi-eye fs-1 mb-3"></i>
+            <div class="p-4 shadow-sm h-100 border rounded">
+            <i class="bi bi-heart fs-1 mb-3"></i>
             <h5 class="fw-bold">Valores</h5>
             <p class="text-muted">
                 Compromiso con el cliente, innovación constante, responsabilidad y pasión

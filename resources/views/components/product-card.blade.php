@@ -35,7 +35,7 @@
                 <p class="card-text fw-bold fs-5 mb-3">${{ $precio }}</p>
             @endif
             
-            <button class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</button>
+            <A href="/en-proceso" class="btn btn-dark w-100 fw-bold text-uppercase rounded-0 btn-comprar">Agregar al carrito</a>
         </div>
     </div>
 </div>

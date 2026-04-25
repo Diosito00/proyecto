@@ -218,17 +218,28 @@
                 </div>
 
             </div>
+
+                
+
+            <div class="col-md-4">
+                <div class="p-4 shadow-sm h-100 border rounded">
+                    <!-- Ícono de cambio/devolución -->
+                    <i class="bi bi-arrow-repeat fs-1 mb-3"></i>
+                    <h5>Política de Cambios</h5>
+                <p class="text-muted">
+                    Podés realizar cambios dentro de los 30 días posteriores a la compra,
+                    siempre que el producto se encuentre en buen estado.
+                </p>
+                </div>
+            </div>
+
         </div>
 
     </div>
 
-</div>
-
-<!-- Footer (componente Blade) -->
-<x-footer/>
-
-<!-- JS de Bootstrap -->
-<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-
+    <!-- Footer (componente Blade) -->
+    <x-footer/>
+    <!-- JS de Bootstrap -->
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
