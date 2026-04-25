@@ -8,7 +8,7 @@
         {{-- Carga los estilos principales de Bootstrap --}}
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
 
-        <title>Tillas</title>
+        <title>Tillas - Zapatillas Urbanas</title>
         <link rel="icon" href="{{ asset('imagenes/Logo-blanco.ico') }}" type="image/x-icon">
         <link rel="stylesheet" href="css/style-inicio.css">
     </head>

@@ -13,10 +13,8 @@
         
         {{-- Favicon: El iconito que aparece en la pestaña del navegador. --}}
         <link rel="icon" href="{{ asset('imagenes/Logo-blanco.png') }}" type="image/x-icon">
-        <title>Tillas - Terminos de uso</title>
-        {{-- Enlaces a tus hojas de estilo (CSS) --}}
+        <title>Terminos de uso | Tillas - Zapatillas Urbanas</title>
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="css/style-carrusel.css">
     </head>
     <body>
 

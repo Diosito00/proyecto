@@ -9,7 +9,7 @@
     <!-- Hace que la página sea responsive (se adapte a celular, tablet y PC) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Catálogo - Tillas</title>
+    <title>Catalogo | Tillas - Zapatillas Urbanas</title>
     <!-- Ícono de la pestaña -->
     <!-- asset() genera la ruta correcta del archivo en Laravel -->
     <link rel="icon" href="{{ asset('imagenes/Logo-blanco.ico') }}" type="image/x-icon">
