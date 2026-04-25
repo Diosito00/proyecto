@@ -20,15 +20,15 @@
     </head>
 
     {{-- CONTENEDOR PRINCIPAL DEL CARRUSEL
-         id="carruselInicio": Un identificador único. Las flechas y los puntitos de abajo usan este ID para saber a quién controlar.
-         carousel: Inicializa el componente en Bootstrap.
-         slide: Agrega el efecto de transición suave al cambiar de foto. --}}
+        id="carruselInicio": Un identificador único. Las flechas y los puntitos de abajo usan este ID para saber a quién controlar.
+        carousel: Inicializa el componente en Bootstrap.
+        slide: Agrega el efecto de transición suave al cambiar de foto. --}}
     <div id="carruselInicio" class="carousel slide">
         
         {{-- INDICADORES: Los puntitos en la parte inferior para saltar entre imágenes. --}}
         <div class="carousel-indicators">
             {{-- data-bs-target apunta al ID principal. data-bs-slide-to indica el índice (empieza en 0).
-                 La clase 'active' marca cuál es el puntito encendido al inicio. --}}
+                La clase 'active' marca cuál es el puntito encendido al inicio. --}}
             <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -39,8 +39,8 @@
             
             {{-- SLIDE 1: PUMA OTOÑO-INVIERNO --}}
             {{-- carousel-item: Define una diapositiva. 
-                 active: Es OBLIGATORIO que el primer elemento lo tenga, o el carrusel no se verá.
-                 position-relative: Permite colocar la capa oscura y el texto flotando por encima de la imagen. --}}
+                active: Es OBLIGATORIO que el primer elemento lo tenga, o el carrusel no se verá.
+                position-relative: Permite colocar la capa oscura y el texto flotando por encima de la imagen. --}}
             <div class="carousel-item active position-relative">
                 
                 {{-- d-block w-100: Asegura que la imagen ocupe todo el ancho sin márgenes raros. --}}
@@ -50,9 +50,9 @@
                 <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.3);"></div>
 
                 {{-- TEXTOS Y BOTONES (CAPTION)
-                     text-start: Alinea el texto a la izquierda.
-                     z-2: Asegura que el texto quede "por encima" de la capa oscura.
-                     (Nota: Aquí eliminamos 'd-none d-md-block' para que este cuadro SÍ se vea en los celulares). --}}
+                    text-start: Alinea el texto a la izquierda.
+                    z-2: Asegura que el texto quede "por encima" de la capa oscura.
+                    (Nota: Aquí eliminamos 'd-none d-md-block' para que este cuadro SÍ se vea en los celulares). --}}
                 <div class="carousel-caption text-start mb-md-5 z-2">
                     <h6 class="text-uppercase tracking-wide mb-2 text-light">Nueva Temporada</h6>
                     <h2 class="display-4 fw-bold mb-3 text-white">PUMA OTOÑO-INVIERNO</h2>

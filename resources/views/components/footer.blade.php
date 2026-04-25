@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
     
-    {{-- Carga FontAwesome: Una de las librerías de íconos vectoriales más populares. Te permite usar íconos de redes sociales, teléfonos, sobres, etc., mediante clases de CSS. --}}
+    {{-- Carga FontAwesome: Una de las librerías de íconos vectoriales más populares. permite usar íconos de redes sociales, teléfonos, sobres, etc., mediante clases de CSS. --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="css/style-footer.css">
@@ -28,12 +28,12 @@
         <div class="row g-4">
 
             {{-- Brand (Logo y Marca) --}}
-            {{-- col-12: En celulares, ocupa el 100% del ancho. col-md-3: En tablets y PCs, ocupa un cuarto del ancho (3 de 12 columnas). Como tienes 4 bloques iguales, se alinearán perfectamente en una sola línea en PC. --}}
+            {{-- col-12: En celulares, ocupa el 100% del ancho. col-md-3: En tablets y PCs, ocupa un cuarto del ancho (3 de 12 columnas). Como son 4 bloques iguales, se alinearán perfectamente en una sola línea en PC. --}}
             <div class="col-12 col-md-3">
                 <div class="footer-brand">
                     <img src="{{ asset('imagenes/Logo-blanco.png') }}" alt="tillas logo">
                     
-                    {{-- <span>: Etiqueta en línea (no genera saltos de línea) ideal para aplicar estilos a fragmentos de texto pequeños, como el nombre de tu marca. --}}
+                    {{-- <span>: Etiqueta en línea (no genera saltos de línea) ideal para aplicar estilos a fragmentos de texto pequeños, como el nombre de la marca. --}}
                     <span class="footer-brand-name">Tillas</span>
                 </div>
                 <div class="footer-tagline">zapatillas store</div>
@@ -53,8 +53,8 @@
                 <h6>Contactanos</h6>
                 <div class="contact-item">
                     {{-- <i> con clases de FontAwesome: 
-                         fas: Significa "Font Awesome Solid" (íconos rellenados).
-                         fa-envelope, fa-phone, fa-map-marker-alt: Son los nombres específicos de cada ícono. --}}
+                        fas: Significa "Font Awesome Solid" (íconos rellenados).
+                        fa-envelope, fa-phone, fa-map-marker-alt: Son los nombres específicos de cada ícono. --}}
                     <i class="fas fa-envelope"></i>
                     <span>info@tillas.com</span>
                 </div>
@@ -96,7 +96,7 @@
         {{-- Bottom bar (Barra Inferior de Copyright y Legales) --}}
         <div class="footer-bottom">
             {{-- &copy;: Es el código HTML para generar el símbolo de copyright (©). 
-                 {{ date('Y') }}: ¡Excelente uso de PHP/Blade! Esto imprimirá automáticamente el año actual en el que estamos, así no tienes que actualizar tu código cada primero de enero. --}}
+                {{ date('Y') }}:  Esto imprimirá automáticamente el año actual en el que estamos, así no tienes que actualizar tu código cada primero de enero. --}}
             <span>&copy; {{ date('Y') }} Tillas. Todos los derechos reservados.</span>
             
             <div class="d-flex gap-3">

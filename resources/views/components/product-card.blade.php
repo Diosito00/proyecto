@@ -1,5 +1,5 @@
 {{-- Definimos las variables (propiedades) que este componente va a recibir. 
-     Algunas tienen un valor por defecto (como null o false) para que no sea obligatorio pasarlas siempre. --}}
+    Algunas tienen un valor por defecto (como null o false) para que no sea obligatorio pasarlas siempre. --}}
 @props(['marca', 'nombre', 'precio', 'imagen', 'precioViejo' => null, 'nuevo' => false, 'descuento' => null])
 
 <div class="col">
@@ -16,9 +16,6 @@
                 <span class="badge bg-danger text-white position-absolute top-0 start-0 m-3 z-1 px-2 py-1">{{ $descuento }}</span>
             @endif
 
-            {{-- <button class="btn btn-light btn-sm rounded-circle shadow-sm position-absolute top-0 end-0 m-3 z-1 wish-btn">
-                <i class="bi bi-heart"></i>
-            </button> --}}
             
             {{-- Imprimimos la imagen y el nombre dinámicamente --}}
             <img src="{{ asset($imagen) }}" class="card-img-top product-img" alt="{{ $nombre }}">

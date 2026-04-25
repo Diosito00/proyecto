@@ -1,24 +1,42 @@
 <?php
-
+// Namespace: organiza el código dentro del proyecto Laravel.
+// App = carpeta principal
+// Http = capa web
+// Controllers = controladores (lógica del sistema)
 namespace App\Http\Controllers;
 
+// Importa la clase Request.
+// Sirve para acceder a los datos que envía el usuario (GET, POST, filtros, etc)
 use Illuminate\Http\Request;
+// Clase para crear paginación manual.
+// Permite dividir resultados en páginas y generar links (1,2,3...)
 use Illuminate\Pagination\LengthAwarePaginator;
 
+// Definición del controlador.
+// "extends Controller" significa que hereda funcionalidades base de Laravel
 class ProductController extends Controller
 {
+// Método principal del catálogo.
+    // Se ejecuta cuando el usuario entra a la ruta del catálogo.
+    // Recibe un objeto Request con todos los datos del usuario
     public function index(Request $request)
     {
         // 1. SIMULAMOS LA BASE DE DATOS
+         // collect(): crea una colección de Laravel
+        // Sirve para trabajar con datos como si fuera una base de datos
+        // Permite usar métodos como filter, whereIn, sortBy, etc
         $todosLosProductos = collect([
+            //(object): convierte el array en objeto
+            //Permite acceder con -> (ej: $producto->marca)
+
             (object) [
-                'id' => 1,
-                'marca' => 'Puma',
-                'nombre' => 'Puma Velocity Nitro 3',
-                'precio' => 125000,
-                'imagen' => 'imagenes/Puma-v-n-3.jpg',
-                'categoria' => 'mujer',
-                'deporte' => 'running',
+                'id' => 1, // identificador único
+                'marca' => 'Puma', // marca del producto
+                'nombre' => 'Puma Velocity Nitro 3', // nombre
+                'precio' => 125000, // precio actual
+                'imagen' => 'imagenes/Puma-v-n-3.jpg', // ruta imagen
+                'categoria' => 'mujer', // categoría (hombre, mujer, niño, unisex)
+                'deporte' => 'running', // tipo de uso/deporte
             ],
             (object) [
                 'id' => 2,
@@ -113,62 +131,100 @@ class ProductController extends Controller
         ]);
 
         // 2. APLICAR FILTRO: Categorías
+        // filled(): verifica si el usuario envió ese dato
+        // Evita errores si no hay filtros
         if ($request->filled('categorias')) {
             // Guardamos lo que el usuario marcó en una variable temporal
             $categoriasSolicitadas = $request->categorias;
 
             // Verificamos si marcó 'hombre' o 'mujer'
+            // in_array(): verifica si un valor existe dentro de un array
             if (in_array('hombre', $categoriasSolicitadas) || in_array('mujer', $categoriasSolicitadas)) {
                 // Si es así, inyectamos silenciosamente la categoría 'unisex' a su búsqueda
                 $categoriasSolicitadas[] = 'unisex'; 
+                 // [] agrega un elemento al array
+                // Lógica de negocio:
+                // si elige hombre o mujer → también incluye unisex automáticamente
             }
 
             // Filtramos usando la nueva lista ampliada
+             // whereIn(): filtra la colección
+            // Devuelve productos cuya categoría coincida con cualquiera del array
             $todosLosProductos = $todosLosProductos->whereIn('categoria', $categoriasSolicitadas);
         }
 
         // Si el usuario marcó checkboxes de deporte, filtramos la colección
         if ($request->filled('deportes')) {
             $todosLosProductos = $todosLosProductos->whereIn('deporte', $request->deportes);
+            // Filtra productos por deporte seleccionado
         }
-        // ----------------------------------------
 
         // 3. APLICAR FILTRO: Marcas
+        // array_map(): aplica una función a cada elemento del array
+            // strtolower(): convierte texto a minúsculas
+            // Sirve para evitar errores por mayúsculas/minúsculas
+
         if ($request->filled('marcas')) {
             $marcasMarcadas = array_map('strtolower', $request->marcas);
+             // filter(): filtra usando una función personalizada
+
+                // function(): función anónima
+                // $producto: cada elemento de la colección
+                // use(): permite usar variables externas dentro de la función
             $todosLosProductos = $todosLosProductos->filter(function ($producto) use ($marcasMarcadas) {
+                 // Compara marca del producto con las seleccionadas
                 return in_array(strtolower($producto->marca), $marcasMarcadas);
             });
         }
 
         // 4. APLICAR ORDENAMIENTO
+        // get(): obtiene un valor del request
+        // segundo parámetro = valor por defecto si no existe
         $orden = $request->get('ordenarPor', 'recientes');
         if ($orden == 'menor_precio') {
+            // sortBy(): ordena de menor a mayor
             $todosLosProductos = $todosLosProductos->sortBy('precio');
         } elseif ($orden == 'mayor_precio') {
+            // sortByDesc(): ordena de mayor a menor
             $todosLosProductos = $todosLosProductos->sortByDesc('precio');
         } else {
+             // por defecto: productos más recientes primero
             $todosLosProductos = $todosLosProductos->sortByDesc('id');
         }
 
         // 5. PAGINACIÓN MANUAL PARA ARREGLOS
+        // Detecta en qué página está el usuario
         $paginaActual = LengthAwarePaginator::resolveCurrentPage();
+        // Cantidad de productos por página
         $porPagina = 6; 
         
-        $itemsActuales = $todosLosProductos->slice(($paginaActual - 1) * $porPagina, $porPagina)->values();
+        // slice(): corta la colección
+        // Calcula qué productos mostrar según la página
+        $itemsActuales = $todosLosProductos->slice(($paginaActual - 1) * $porPagina, $porPagina)
+        // values(): reindexa la colección (0,1,2...)
+            // Evita problemas en la vista
+        ->values();
         
         $productos = new LengthAwarePaginator(
-            $itemsActuales, 
-            $todosLosProductos->count(), 
-            $porPagina, 
-            $paginaActual, 
+            $itemsActuales, // productos de la página actual
+            $todosLosProductos->count(),  // total de productos
+            $porPagina, // cantidad por página
+            $paginaActual, // página actual
             [
-                'path' => $request->url(),
-                'query' => $request->query()
+                'path' => $request->url(), // url(): obtiene la URL actual
+
+                'query' => $request->query()  // query(): mantiene los filtros en la URL
+                // IMPORTANTE: evita perder filtros al cambiar de página
             ]
         );
 
         // 6. ENVIAR A LA VISTA
+        // view(): carga la vista catalogo.blade.php
+
+        // compact('productos'):
+        // crea automáticamente:
+        // ['productos' => $productos]
+        // y lo envía a la vista
         return view('catalogo', compact('productos'));
     }
 }
