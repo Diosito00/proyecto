@@ -10,7 +10,7 @@
 
         <title>Tillas-Comercializacion</title>
         <link rel="icon" href="{{ asset('imagenes/Logo-blanco.ico') }}" type="image/x-icon">
-        <link rel="stylesheet" href="css/style-comercializacion.css">
+        <link rel="stylesheet" href="{{ asset('css/style-comercializacion.css') }}?v={{ time() }}">
         
     </head>
 
@@ -108,9 +108,9 @@
 
             <!-- Lista -->
             <ul class="text-muted small">
-                <li>Tarjetas de crédito y débito (Visa, Mastercard, American Express)</li>
+                <li>Tarjetas de crédito y débito (<strong>Visa, Mastercard, American Express</strong>)</li>
                 <li>Hasta <strong>6 cuotas sin interés</strong> en productos seleccionados</li>
-                <li>Pagos a través de MercadoPago con múltiples opciones disponibles</li>
+                <li>Pagos a través de <strong>MercadoPago</strong> con múltiples opciones disponibles</li>
                 <li>Transferencia bancaria directa con confirmación manual o automática</li>
                 <li>Billeteras virtuales (Ualá, MercadoPago, entre otras)</li>
                 <li>Confirmación inmediata del pago en la mayoría de los casos</li>
@@ -134,8 +134,8 @@
                 <!-- TEXTO PRINCIPAL -->
                 <p class="text-muted small">
                     Queremos que estés completamente conforme con tu compra. Si el producto no cumple
-                    con tus expectativas, podés solicitar un cambio o devolución de manera simple,
-                    rápida y sin complicaciones.
+                    con tus expectativas, podés solicitar un cambio o <strong>devolución de manera simple,
+                    rápida y sin complicaciones</strong>.
 
                     Nuestro proceso está diseñado para ser transparente y ágil, permitiéndote resolver
                     cualquier inconveniente sin demoras innecesarias y con acompañamiento de nuestro equipo.
