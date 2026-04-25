@@ -1,0 +1,20 @@
+/* Efecto de elevación suave para las tarjetas */
+.tarjeta-valor {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-valor:hover {
+    transform: translateY(-5px); /* Se levanta 5 píxeles */
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important; /* Sombra más fuerte */
+}
+
+/* Espaciado elegante para títulos en mayúscula */
+.tracking-wide {
+    letter-spacing: 0.15em;
+}
+
+/* Asegura que la foto de la historia cubra su espacio sin estirarse */
+.img-historia {
+    object-fit: cover;
+    min-height: 400px;
+}

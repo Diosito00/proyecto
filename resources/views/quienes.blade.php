@@ -6,7 +6,7 @@
     <title>Quiénes Somos | Tillas - Tienda de Zapatillas Urbanas</title>
     <link rel="icon" href="{{ asset('imagenes/Logo-blanco.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="css/style-quienes.css">
+    <link rel="stylesheet" href="{{ asset('css/style-quienes.css') }}?v={{ time() }}">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <div class="container position-relative z-1 py-5">
         <h1 class="display-4 fw-bold mb-3 text-uppercase tracking-wide">Nuestra Esencia</h1>
         <p class="lead mb-0 mx-auto" style="max-width: 600px;">
-            En Tillas nos dedicamos a ofrecer zapatillas que combinan estilo urbano, comodidad y calidad, pensadas para acompañarte en cada paso.
+            En <strong>Tillas</strong> nos dedicamos a ofrecer zapatillas que combinan estilo urbano, comodidad y calidad, pensadas para acompañarte en cada paso.
         </p>
     </div>
 </div>
@@ -29,7 +29,7 @@
     <div class="row g-4 text-center mb-5 pb-5 border-bottom">
 
         <div class="col-md-4">
-            <div class="p-5 bg-light border-0 rounded shadow-sm h-100">
+            <div class="p-5 bg-light border-0 rounded shadow-sm h-100 tarjeta-valor">
                 <i class="bi bi-bullseye display-4 mb-4 d-block text-dark"></i>
                 <h4 class="fw-bold text-uppercase mb-3">Misión</h4>
                 <p class="text-muted mb-0">
@@ -39,7 +39,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="p-5 bg-light border-0 rounded shadow-sm h-100">
+            <div class="p-5 bg-light border-0 rounded shadow-sm h-100 tarjeta-valor">
                 <i class="bi bi-eye display-4 mb-4 d-block text-dark"></i>
                 <h4 class="fw-bold text-uppercase mb-3">Visión</h4>
                 <p class="text-muted mb-0">
@@ -49,7 +49,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="p-5 bg-light border-0 rounded shadow-sm h-100">
+            <div class="p-5 bg-light border-0 rounded shadow-sm h-100 tarjeta-valor">
                 <i class="bi bi-heart display-4 mb-4 d-block text-dark"></i>
                 <h4 class="fw-bold text-uppercase mb-3">Valores</h4>
                 <p class="text-muted mb-0">
