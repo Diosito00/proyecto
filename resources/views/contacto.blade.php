@@ -14,8 +14,7 @@
         <link rel="icon" href="{{ asset('imagenes/Logo-blanco.ico') }}" type="image/x-icon">
         <!-- Bootstrap: framework de estilos -->
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
-        <!-- CSS personalizado -->
-        <link rel="stylesheet" href="{{ asset('css/style-quienes.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style-quienes.css') }}?v={{ time() }}">
     </head>
     
 <!-- bg-light: fondo gris claro para toda la página -->
