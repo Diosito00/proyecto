@@ -1,47 +1,76 @@
+/* TIPOGRAFÍA PERSONALIZADA @font-face:
+   Permite cargar una fuente externa (no estándar del navegador) */
 @font-face {
         font-family: 'SystemFont';
+        /* src: Ruta del archivo de la fuente format('opentype'):Indica el tipo de archivo */
         src: url('fonts/system-font-from-windows-3-1.otf') format('opentype');
+        /* font-display: swap: Muestra una fuente temporal mientras carga la personalizada */
         font-display: swap;
     }
 
+    /* cat-footer: Contenedor principal del footer */
     .cat-footer {
+    /* Fondo negro */
         background-color: #000000;
+        /* Línea superior gris oscura */
         border-top: 1px solid #2a2a2a;
+        /* Color general del texto */
         color: #888;
+        /* Tamaño base del texto */
         font-size: 13px;
+        /* Altura de línea (mejora lectura) */
         line-height: 1.7;
+         /* Separación respecto al contenido superior */
         margin-top: 4rem;
     }
 
-    /* Brand */
+    /* Contenedor del logo y nombre */
     .cat-footer .footer-brand {
+        /* display: flex: alinea elementos en fila */
         display: flex;
+        /* align-items: center: centra verticalmente */
         align-items: center;
+         /* gap: separación entre logo y texto */
         gap: 10px;
+        /* margen inferior */
         margin-bottom: 6px;
     }
+    /* Imagen del logo */
     .cat-footer .footer-brand img {
+        /* tamaño fijo */
         width: 32px;
         height: 32px;
+        /* object-fit: contain: mantiene proporción sin deformar */
         object-fit: contain;
     }
+    /* Nombre "Tillas" */
     .cat-footer .footer-brand-name {
+        /* fuente personalizada */
         font-family: 'SystemFont', monospace;
+        /* tamaño */
         font-size: 18px;
+        /* espacio entre letras */
         letter-spacing: 2px;
+        /* mayúsculas */
         text-transform: uppercase;
+        /* color blanco */
         color: #ffffff;
+         /* altura de línea compacta */
         line-height: 1;
     }
+
+    /* Texto pequeño debajo (tagline) */
     .cat-footer .footer-tagline {
         font-size: 10px;
         color: #333;
         text-transform: uppercase;
         letter-spacing: 1.8px;
         margin-top: 2px;
+        /* padding-left: alinea con el texto (debajo del nombre, no del logo) */
         padding-left: 42px;
     }
 
+    /* TÍTULOS DE SECCIÓN */
     .cat-footer h6 {
         color: #fff;
         font-size: 11px;
@@ -51,61 +80,91 @@
         margin-bottom: 14px;
     }
 
+    /* TEXTOS GENERALES */
     .cat-footer p,
     .cat-footer li {
         color: #555;
         font-size: 13px;
     }
 
+    /* CONTACTO */
     .cat-footer .contact-item {
         display: flex;
+        /* alinea arriba (útil si hay varias líneas) */
         align-items: flex-start;
         gap: 8px;
         margin-bottom: 7px;
         color: #555;
     }
+    /* Íconos */
     .cat-footer .contact-item i {
         color: #ffffff;
         font-size: 12px;
+        /* separa un poco del texto */
         margin-top: 3px;
+        /* evita que el ícono se deforme */
         flex-shrink: 0;
     }
 
+    /* REDES SOCIALES */
+    /* Botones de redes */
     .cat-footer .social-link {
+        /* centra el ícono */
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        /* tamaño cuadrado */
         width: 34px;
         height: 34px;
+        /* bordes redondeados */
         border-radius: 8px;
+        /* fondo oscuro */
         background: #161616;
+        /* borde sutil */
         border: 1px solid #222;
+        /* color del ícono */
         color: #555;
         font-size: 14px;
+        /* quita subrayado */
         text-decoration: none;
+        /* transición suave */
         transition: background 0.15s, color 0.15s, border-color 0.15s;
     }
+
+    /* Hover (cuando pasás el mouse) */
     .cat-footer .social-link:hover {
+          /* rojo */
         background: #c0392b;
         border-color: #c0392b;
+        /* ícono blanco */
         color: #fff;
     }
 
+    /* PARTE INFERIOR (COPYRIGHT) */
     .cat-footer .footer-bottom {
+        /* línea separadora */
         border-top: 1px solid #1a1a1a;
         padding-top: 18px;
         margin-top: 32px;
+        /* flexbox */
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 10px;
     }
+    /* Links legales */
     .cat-footer .footer-bottom a {
         color: #333;
         text-decoration: none;
         font-size: 12px;
         transition: color 0.15s;
     }
-    .cat-footer .footer-bottom a:hover { color: #aaa; }
-    .cat-footer .footer-bottom span { color: #2a2a2a; font-size: 12px; }
+    /* Hover links */
+    .cat-footer .footer-bottom a:hover { 
+        color: #aaa; 
+    }
+    /* Texto copyright */
+    .cat-footer .footer-bottom span { 
+        color: #2a2a2a; font-size: 12px;
+    }

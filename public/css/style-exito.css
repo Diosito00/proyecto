@@ -1,33 +1,56 @@
+/* body.body-exito: Aplica estilos SOLO al <body> que tenga la clase "body-exito" (esto evita afectar otras páginas del sitio) */
 body.body-exito {
+    /* linear-gradient:Crea un degradado de colores */
     background: linear-gradient(135deg, #f5f5f5, #e9ecef);
 }
 
+/*  TARJETA DE MENSAJE */
+/* card-exito: Contenedor principal del mensaje de éxito */
 .card-exito {
+    /* Fondo blanco para resaltar sobre el gris */
     background: white;
+    /* padding: espacio interno (separa mejor el contenido) */
     padding: 40px;
+    /* border-radius: bordes redondeados */
     border-radius: 20px;
+    /* max-width: limita el ancho máximo en PC */
     max-width: 550px;
+    /* width: ocupa todo el ancho disponible en celular */
     width: 100%;
+    /* animation: Aplica la animación "fadeIn" 0.6s: duración ease-in-out: velocidad suave */
     animation: fadeIn 0.6s ease-in-out;
 }
 
+/* icono-exito: Estiliza el ícono (check verde) */
 .icono-exito {
+    /* font-size: tamaño grande del ícono */
     font-size: 4rem;
+    /* color: verde (indica éxito) */
     color: #28a745;
 }
 
+/* btn-exito: Botón personalizado */
 .btn-exito {
+    /* border-radius: botón redondeado tipo "pill" */
     border-radius: 30px;
+    /* padding: espacio interno del botón */
     padding: 10px 30px;
 }
 
+/* keyframes fadeIn: Define una animación personalizada */
 @keyframes fadeIn {
+    /* Estado inicial */
     from {
+        /* opacity: invisible */
         opacity: 0;
+        /* translateY: desplazado hacia abajo */
         transform: translateY(20px);
     }
+    /* Estado final */
     to {
+        /* opacity: completamente visible */
         opacity: 1;
+        /* vuelve a su posición normal */
         transform: translateY(0);
     }
 }

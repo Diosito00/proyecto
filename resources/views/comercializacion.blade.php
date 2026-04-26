@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+<!-- Define el idioma del sitio (español) -->    
+<html lang="es">
+
     <head>
+        <!-- Permite usar caracteres especiales como ñ y tildes -->
         <meta charset="UTF-8">
+        <!-- Hace que la página sea responsive (se adapte a celulares y tablets) -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {{-- <meta http-equiv="X-UA-Compatible"...>: Fuerza a Internet Explorer a usar su motor de renderizado más reciente (Edge). --}}
+        <!-- Compatibilidad con navegadores antiguos de Microsoft -->
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        {{-- Carga los estilos principales de Bootstrap --}}
+        <!-- Importa Bootstrap (framework CSS para diseño y componentes) -->
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
 
         <title>Comercialización | Tillas - Zapatillas Urbanas</title>
+        <!-- Ícono de la pestaña del navegador -->
         <link rel="icon" href="{{ asset('imagenes/Logo-blanco.ico') }}" type="image/x-icon">
+        <!-- CSS propio + cache busting (evita que el navegador use versión vieja) -->
         <link rel="stylesheet" href="{{ asset('css/style-quienes.css') }}?v={{ time() }}">
     </head>
 
@@ -17,33 +23,37 @@
     <body>
     <!-- Barra de navegación (componente Blade) -->
     <x-navbar/>
+
+    <!-- position-relative: permite posicionar elementos absolutos adentro bg-dark: fondo negro text-white: texto blanco text-center: centra el texto py-5: padding vertical mb-5: margen inferior overflow-hidden: evita que elementos se salgan del contenedor -->
     <div class="position-relative bg-dark text-white text-center py-5 mb-5 overflow-hidden">
+        <!-- Imagen de fondo position-absolute: se posiciona sobre el contenedor w-100 h-100: ocupa todo el ancho y alto opacity: transparencia -->
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('{{ asset('imagenes/comercializacion-hero.jpg') }}') center/cover; opacity: 0.3;"></div>
-        
+        <!-- container: centra el contenido z-1: pone el contenido encima del fondo -->
         <div class="container position-relative z-1 py-5">
+            <!-- display-4: título grande fw-bold: negrita text-uppercase: mayúsculas tracking-wide: separación de letras -->
             <h1 class="display-4 fw-bold mb-3 text-uppercase tracking-wide">Comercialización</h1>
+            <!-- lead: texto destacado mx-auto: centra horizontalmente max-width: limita ancho -->
             <p class="lead mb-0 mx-auto" style="max-width: 600px;">
                 Conocé en detalle todas nuestras opciones de compra, envío, pago y políticas para que tengas la mejor experiencia en Tillas.
             </p>
         </div>
     </div>
-    <!-- Contenedor centrado con espacio vertical -->
+    
+    <!-- container: centra contenido py-5: espacio vertical -->
     <div class="container py-5">
-        <!-- mb-5: espacio grande abajo -->
-        <!-- SECCIÓN ENVÍOS (imagen izquierda) -->
+        <!-- SECCIÓN ENVÍOS row: fila de Bootstrap align-items-center: centra verticalmente mb-5: separación abajo -->
         <div class="row align-items-center mb-5">
-            <!-- Imagen -->
+            <!-- Image col-md-6: ocupa la mitad en pantallas medianas -->
             <div class="col-md-6">
-                <!-- img-fluid: imagen adaptable -->
-                <!-- rounded: bordes redondeados -->
-                <!-- shadow: sombra -->
+                <!-- img-fluid: imagen adaptable rounded: bordes redondeados shadow: sombra -->
                 <img src="{{ asset('imagenes/envios.png') }}" class="img-fluid rounded shadow" alt="Envíos">
             </div>
-            <!-- Texto -->
+            
             <div class="col-md-6">
+                <!-- Ícono fs-1: tamaño grande -->
                 <i class="bi bi-truck fs-1 mb-3 text-dark"></i>
                 <h4 class="fw-bold mb-3">Envíos</h4>
-
+                <!-- text-muted: gris small: texto chico -->
                 <p class="text-muted small">
                 Realizamos <strong>envíos a todo el país</strong> mediante servicios de logística confiables,
                 asegurando que tu pedido llegue en tiempo y forma, en perfectas condiciones.
@@ -61,6 +71,7 @@
                 </p>
 
                 <!-- Lista detallada -->
+                <!-- text-muted: gris small: texto chico mt-3: margen arriba -->
                 <ul class="text-muted small mt-3">
                     <li>Entrega estimada entre 48 y 72 horas hábiles (puede variar según la zona)</li>
                     <li>Número de seguimiento en tiempo real para controlar tu envío</li>
@@ -72,17 +83,18 @@
                 </ul>
             </div>
         </div>    
-        <!-- =========================
-            SECCIÓN PAGOS (imagen derecha)
-        ========================== -->
+        <!-- SECCIÓN PAGOS (imagen derecha) flex-md-row-reverse: invierte columnas en PC -->
         <div class="row align-items-center mb-5 flex-md-row-reverse">
-            <!-- Imagen -->
+            <!-- col-md-6: ocupa 6 de 12 columnas (la mitad) en pantallas medianas o más grandes -->
             <div class="col-md-6">
+                <!-- img: muestra una imagen src: ruta de la imagen (Laravel usa asset para buscar en /public) img-fluid: hace la imagen responsive rounded: bordes redondeados shadow: agrega sombra alt: texto alternativo (accesibilidad) -->
                 <img src="{{ asset('imagenes/pagos.png') }}" class="img-fluid rounded shadow" alt="Pagos">
             </div>
             <!-- Texto -->
             <div class="col-md-6">
+                <!-- i: ícono (Bootstrap Icons) - bi bi-credit-card: icono de tarjeta - fs-1: tamaño grande - mb-3: margen inferior - text-dark: color oscuro -->
                 <i class="bi bi-credit-card fs-1 mb-3 text-dark"></i>
+                <!-- h4: título fw-bold: negrita mb-3: separación abajo -->
                 <h4 class="fw-bold mb-3">Formas de Pago</h4>
 
                 <p class="text-muted small">
@@ -96,8 +108,9 @@
                 lo que permite agilizar el procesamiento de tu pedido y reducir los tiempos de preparación y envío.
                 </p>
 
-                <!-- Íconos -->
+                <!-- Íconos d-flex: activa flexbox gap-3: espacio entre elementos mb-3: margen inferior -->
                 <div class="d-flex gap-3 mb-3">
+                    <!-- fs-4: tamaño mediano -->
                     <i class="bi bi-credit-card fs-4"></i>
                     <i class="bi bi-bank fs-4"></i>
                     <i class="bi bi-phone fs-4"></i>
@@ -115,9 +128,8 @@
                 </ul>
             </div>
         </div>    
-        <!-- =========================
-        SECCIÓN CAMBIOS (imagen izquierda)
-        ========================== -->
+        <!--SECCIÓN CAMBIOS (imagen izquierda)-->
+        <!-- row: fila de bootstrap  align-items-center: centra verticalmente mb-5: margen inferior -->
         <div class="row align-items-center mb-5">   
             <!-- Imagen -->
             <div class="col-md-6">
@@ -127,6 +139,7 @@
             <div class="col-md-6">
                 <i class="bi bi-arrow-repeat fs-1 mb-3 text-dark"></i>
                 <h4 class="fw-bold mb-3">Política de Cambios</h4>
+                <!-- mt-5: margen superior grande -->
                 <div class="mt-5">
                     <!-- TEXTO PRINCIPAL -->
                     <p class="text-muted small">
@@ -151,17 +164,18 @@
             </div>
         </div> 
 
-        <!-- =========================
-            SECCIÓN EXTRA
-        ========================== -->
-
+        <!--SECCIÓN EXTRA-->
+        <!-- g-4: gap entre columnas mb-5: margen inferior -->
         <div class="row g-4 mb-5">
+            <!-- col-12: ocupa todo el ancho -->
             <div class="col-12">
                 <h4 class="fw-bold text-center mb-4">¿Cómo comprar en Tillas?</h4>
-                
+                <!-- g-3: espacio entre columnas -->
                 <div class="row g-3 text-center">
                     <div class="col-6 col-md-3">
+                        <!-- p-4: padding interno border rounded: bordes redondeados shadow-sm: sombra suave h-100: altura completa bg-white: fondo blanco tarjeta-valor: clase personalizada -->
                         <div class="p-4 border rounded shadow-sm h-100 bg-white tarjeta-valor">
+                            <!-- d-block: hace que el ícono ocupe toda la línea -->
                             <i class="bi bi-search fs-1 text-dark mb-3 d-block"></i>
                             <h6 class="fw-bold text-uppercase">1. Elegí</h6>
                             <p class="text-muted small mb-0">Buscá tus zapas favoritas en nuestro catálogo.</p>
@@ -192,10 +206,13 @@
             </div>
         </div>
 
+        <!-- SEGURIDAD -->
         <div class="row mb-5">
             <div class="col-12">
+                <!-- d-flex: flexbox flex-column: vertical en mobile flex-md-row: horizontal en PC align-items-center: centra vertical justify-content-center: centra horizontal  gap-4: separación  bg-light: fondo gris claro -->
                 <div class="p-4 border rounded shadow-sm d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 bg-light">
                     <div class="d-flex gap-3">
+                        <!-- text-success: color verde -->
                         <i class="bi bi-shield-check fs-1 text-success"></i>
                         <i class="bi bi-lock fs-1 text-dark"></i>
                     </div>
@@ -206,17 +223,21 @@
                 </div>
             </div>
         </div>
+        <!-- mt-5: margen arriba pt-5: padding arriba border-top: línea superior -->
         <div class="row mt-5 pt-5 border-top">
             <div class="col-12 text-center">
                 <h3 class="fw-bold mb-3">¿Todo listo para estrenar tus próximas Tillas?</h3>
                 <p class="text-muted mb-4">Descubrí los últimos ingresos y aprovechá nuestras cuotas sin interés.</p>
+                <!-- href: ruta btn-dark: botón negro btn-lg: grande rounded-0: sin bordes redondeados px-5: padding horizontal tracking-wide: separación de letras -->
                 <a href="{{ route('catalogo') }}" class="btn btn-dark btn-lg rounded-0 px-5 fw-bold text-uppercase tracking-wide">
                     Ir a la tienda
                 </a>
             </div>  
         </div> 
     </div>    
+        <!-- componente blade del footer -->
         <x-footer/>
+        <!-- script: carga javascript bootstrap.bundle: incluye JS + Popper para componentes -->
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     </body>
 </html>

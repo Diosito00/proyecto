@@ -1,58 +1,45 @@
 <!DOCTYPE html>
+<!-- html: raíz del documento -->
+<!-- lang="es": indica que el contenido está en español -->
 <html lang="es">
 <head>
-    {{-- <meta charset="UTF-8">: Le dice al navegador que use la codificación de caracteres UTF-8, lo cual es vital para que las tildes (á, é) y la letra 'ñ' se vean correctamente. --}}
+    <!-- charset UTF-8: permite usar tildes, ñ, símbolos -->
     <meta charset="UTF-8">
-    
-    {{-- <meta name="viewport"...>: Esencial para el diseño responsivo. Hace que la página web adapte su ancho al tamaño de la pantalla del dispositivo (celular, tablet, etc.). --}}
+    <!-- viewport: hace que la web sea responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    {{-- <meta http-equiv="X-UA-Compatible"...>: Fuerza a Internet Explorer a usar su motor de renderizado más reciente (Edge). --}}
+    <!-- X-UA-Compatible: mejora compatibilidad con navegadores antiguos -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    {{-- Carga de Bootstrap CSS --}}
+    <!-- Bootstrap CSS: framework de estilos -->
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
-    
-    {{-- Carga de Bootstrap Icons: Librería oficial de íconos de Bootstrap. De aquí salen la lupa, el corazón, el carrito y el usuario. --}}
+    <!-- Bootstrap Icons: librería de íconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    {{-- estilos personalizados específicos para la barra de navegación --}}
+    <!-- CSS propio del navbar -->
     <link rel="stylesheet" href="css/style-navbar.css">
 </head>
-{{-- <nav>: Etiqueta semántica HTML5 específica para bloques de navegación principal.
-    navbar: Clase base de Bootstrap para crear la barra.
-    navbar-expand-lg: ¡Clave para el modo responsivo! Le dice a la barra que se muestre completa (expandida) en pantallas Grandes (lg - Laptops/PCs) y que se colapse (modo menú hamburguesa) en pantallas más pequeñas (Tablets/Celulares). --}}
+
+<!-- NAVBAR  nav: etiqueta semántica para navegación navbar: clase base de Bootstrap navbar-expand-lg: expandido en PC, colapsado en mobile custom-navbar: clase propia para estilos personalizados -->
 <nav class="navbar navbar-expand-lg custom-navbar">
-    
-    {{-- container-fluid: Ocupa el 100% del ancho de la pantalla (a diferencia de 'container' normal que deja márgenes grandes a los lados). 
-        px-4: Agrega un Padding (relleno) en el eje X (izquierda y derecha) de nivel 4 para que los elementos no queden pegados a los bordes del monitor. --}}
+    <!-- container-fluid: ocupa todo el ancho px-4: padding horizontal -->
     <div class="container-fluid px-4"> 
-        
-        {{-- navbar-brand: Clase especial para el logo o nombre de la marca. Bootstrap le da un tamaño y espaciado predeterminado perfecto. --}}
+        <!-- LOGO / MARCA navbar-brand: estilo especial para la marca d-flex: usa flexbox align-items-center: centra verticalmente gap-2: separación entre logo y texto -->
         <a class="navbar-brand d-flex align-items-center gap-2" href="/">
-            {{-- El ícono de la página --}}
+            <!-- Imagen del logo asset(): genera ruta correcta width/height: tamaño d-inline-block: permite manejar dimensiones align-text-top: alinea con el texto -->
             <img src="{{ asset('imagenes/Logo-blanco.png') }}" alt="Ícono Tillas" width="35" height="35" class="d-inline-block align-text-top">
             
-            {{-- El texto de la marca --}}
+            <!-- Nombre de la marca fw-bold: negrita text-uppercase: mayúsculas fs-6: tamaño de texto tracking-wide: separación de letras (CSS propio) text-white: color blanco -->
             <span class="fw-bold text-uppercase fs-6 tracking-wide text-white">Tillas</span>
         </a>
 
-        {{-- BOTÓN   (Solo visible en celulares y tablets)
-            navbar-toggler: Estiliza el botón.
-            data-bs-toggle="collapse": Le indica al JavaScript de Bootstrap que este botón activa un elemento colapsable.
-            data-bs-target="#menuPrincipal": Conecta este botón con el <div> que tiene el ID "menuPrincipal" (que contiene los enlaces). --}}
+        <!-- BOTÓN HAMBURGUESA (solo en celular) navbar-toggler: botón de Bootstrap border-0: sin borde data-bs-toggle="collapse": activa colapso data-bs-target="#menuPrincipal": conecta con el menú -->
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Navegación">
-            {{-- bi bi-list: Ícono de menú hamburguesa de Bootstrap Icons. fs-2 (Font-Size 2) lo hace más grande. --}}
+            <!-- Ícono hamburguesa bi bi-list: ícono  fs-2: tamaño grande text-white: color blanco -->
             <i class="bi bi-list text-white fs-2"></i>
         </button>
 
         {{-- CONTENEDOR COLAPSABLE
             collapse navbar-collapse: Todo lo que esté dentro de este <div> se ocultará en celulares y solo se mostrará cuando se presione el botón hamburguesa. En PC siempre será visible. --}}
         <div class="collapse navbar-collapse" id="menuPrincipal">
-            
-            {{-- <ul>: Unordered List. Etiqueta para crear una lista de elementos.
-                navbar-nav: Aplica formato de barra de navegación a la lista (quita viñetas y acomoda los elementos).
-                me-auto: Significa Margin-End Auto. Pone todo el margen sobrante a la derecha de esta lista, empujando los botones de búsqueda y perfil hacia el extremo derecho de la pantalla. --}}
+            <!-- LISTA DE LINKS  navbar-nav: estilo de navegación me-auto: empuja el contenido hacia la derecha mb-2 mb-lg-0: margen en mobile, sin margen en PC center-links: clase personalizada -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 center-links">
                 
                 {{-- <li>: List Item. Cada elemento de la lista. nav-item: Margen para elementos de la navbar. --}}

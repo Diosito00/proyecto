@@ -1,45 +1,41 @@
 <!DOCTYPE html>
+<!-- html: raíz del documento lang="es": idioma español -->
 <html lang="es">
 <head>
-    {{-- <meta charset="UTF-8">: Le dice al navegador que use la codificación de caracteres UTF-8, lo cual es vital para que las tildes (á, é) y la letra 'ñ' se vean correctamente. --}}
+    <!-- charset UTF-8: permite usar tildes, ñ, símbolos -->
     <meta charset="UTF-8">
-    
-    {{-- <meta name="viewport"...>: Esencial para el diseño responsivo. Hace que la página web adapte su ancho al tamaño de la pantalla del dispositivo (celular, tablet, etc.). --}}
+    <!-- viewport: hace que el diseño sea responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    {{-- <meta http-equiv="X-UA-Compatible"...>: Fuerza a Internet Explorer a usar su motor de renderizado más reciente (Edge). --}}
+    <!-- Compatibilidad con navegadores antiguos -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <!-- Bootstrap CSS: estilos base -->
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
-    
-    {{-- Carga FontAwesome: Una de las librerías de íconos vectoriales más populares. permite usar íconos de redes sociales, teléfonos, sobres, etc., mediante clases de CSS. --}}
+    <!-- FontAwesome: librería de íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <!-- CSS propio del footer -->
     <link rel="stylesheet" href="css/style-footer.css">
 </head>
 
-{{-- <footer>: Etiqueta semántica de HTML5. Indica que esta sección es el pie de página del documento. Es excelente para la accesibilidad y el SEO. --}}
+<!-- footer: etiqueta semántica para el pie de página cat-footer: clase personalizada -->
 <footer class="cat-footer">
-    
-    {{-- container: Centra todo el bloque en la pantalla. py-5: Aplica un relleno (padding) generoso arriba y abajo. --}}
+    <!-- container: centra el contenido  py-5: padding arriba y abajo -->
     <div class="container py-5">
-        
-        {{-- row: Crea una fila para la cuadrícula de Bootstrap. g-4: (Gap 4) Agrega un espacio uniforme tanto horizontal como vertical entre las columnas. --}}
+        <!-- row: fila de Bootstrap g-4: separación entre columnas -->
         <div class="row g-4">
-
-            {{-- Brand (Logo y Marca) --}}
-            {{-- col-12: En celulares, ocupa el 100% del ancho. col-md-3: En tablets y PCs, ocupa un cuarto del ancho (3 de 12 columnas). Como son 4 bloques iguales, se alinearán perfectamente en una sola línea en PC. --}}
+            <!-- BLOQUE MARCA col-12: ocupa todo en celular  col-md-3: ocupa 1/4 en PC -->
             <div class="col-12 col-md-3">
+                <!-- Contenedor del logo -->
                 <div class="footer-brand">
+                    <!-- Imagen del logo asset(): ruta dinámica en Laravel -->
                     <img src="{{ asset('imagenes/Logo-blanco.png') }}" alt="tillas logo">
-                    
-                    {{-- <span>: Etiqueta en línea (no genera saltos de línea) ideal para aplicar estilos a fragmentos de texto pequeños, como el nombre de la marca. --}}
+                    <!-- Nombre de la marca -<span>: Etiqueta en línea (no genera saltos de línea) ideal para aplicar estilos a fragmentos de texto pequeños, como el nombre de la marca. -->
                     <span class="footer-brand-name">Tillas</span>
                 </div>
+                <!-- Subtítulo o slogan -->
                 <div class="footer-tagline">zapatillas store</div>
             </div>
 
-            {{-- About (Sobre Nosotros) --}}
+            <!-- BLOQUE SOBRE NOSOTROS -->
             <div class="col-12 col-md-3">
                 <h6>Sobre Nosotros</h6>
                 <p>
@@ -48,7 +44,7 @@
                 </p>
             </div>
 
-            {{-- Contact (Contacto) --}}
+            <!-- BLOQUE CONTACTO -->
             <div class="col-12 col-md-3">
                 <h6>Contactanos</h6>
                 <div class="contact-item">
@@ -68,10 +64,9 @@
                 </div>
             </div>
 
-            {{-- Social (Redes Sociales) --}}
+            <!-- BLOQUE REDES SOCIALES -->
             <div class="col-12 col-md-3">
                 <h6>Redes Sociales</h6>
-                
                 {{-- d-flex gap-2: Activa Flexbox. Pone todos los botones de redes sociales en una sola línea horizontal y les agrega una separación nivel 2 entre ellos. --}}
                 <div class="d-flex gap-2">
                     
@@ -95,8 +90,8 @@
 
         {{-- Bottom bar (Barra Inferior de Copyright y Legales) --}}
         <div class="footer-bottom">
-            {{-- &copy;: Es el código HTML para generar el símbolo de copyright (©). 
-                {{ date('Y') }}:  Esto imprimirá automáticamente el año actual en el que estamos, así no tienes que actualizar tu código cada primero de enero. --}}
+            <!-- &copy;: símbolo de copyright -->
+            <!-- date('Y'): año automático -->
             <span>&copy; {{ date('Y') }} Tillas. Todos los derechos reservados.</span>
             
             <div class="d-flex gap-3">

@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-{{-- <html lang="es">: Define el idioma principal de la página como español. Esencial para los motores de búsqueda y herramientas de accesibilidad. --}}
+{{-- <html lang="es">: Define el idioma principal de la página como español. --}}
 <html lang="es">
     <head>
-        {{-- <meta charset="UTF-8">: Permite que el navegador lea correctamente caracteres especiales como la 'ñ' y las tildes. --}}
+        {{-- Codificación UTF-8: permite usar acentos, ñ y símbolos correctamente --}}
         <meta charset="UTF-8">
-        
-        {{-- <meta name="viewport"...>: La regla de oro del diseño responsivo. Obliga a la página a adaptarse al ancho de la pantalla del celular o tablet del usuario. --}}
+        {{-- Hace que el diseño sea responsive (se adapte a celular, tablet y PC) --}}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        {{-- <meta http-equiv="X-UA-Compatible"...>: Le dice a navegadores antiguos de Microsoft que usen su mejor motor de renderizado. --}}
+        {{-- Compatibilidad con navegadores antiguos (especialmente Internet Explorer) --}}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
-        {{-- Favicon: El iconito que aparece en la pestaña del navegador. --}}
+        {{-- Ícono de la pestaña del navegador --}}
         <link rel="icon" href="{{ asset('imagenes/Logo-blanco.png') }}" type="image/x-icon">
-        
-        {{-- Enlaces a tus hojas de estilo (CSS) --}}
+        {{-- Bootstrap: framework de estilos (grid, botones, etc) --}}
         <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+        {{-- Estilos personalizados del carrusel --}}
         <link rel="stylesheet" href="css/style-carrusel.css">
     </head>
 
-    {{-- CONTENEDOR PRINCIPAL DEL CARRUSEL
-        id="carruselInicio": Un identificador único. Las flechas y los puntitos de abajo usan este ID para saber a quién controlar.
-        carousel: Inicializa el componente en Bootstrap.
-        slide: Agrega el efecto de transición suave al cambiar de foto. --}}
+    {{-- CONTENEDOR PRINCIPAL DEL CARRUSEL id="carruselInicio": identificador único para controlar el carrusel carousel: activa el componente de Bootstrap slide: agrega animación al cambiar imágenes--}}
     <div id="carruselInicio" class="carousel slide">
         
         {{-- INDICADORES: Los puntitos en la parte inferior para saltar entre imágenes. --}}
