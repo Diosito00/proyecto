@@ -30,7 +30,6 @@
             {{-- card-body: contenido de la tarjeta px-0: elimina padding horizontal pb-0: elimina padding inferior --}}
         <div class="card-body px-0 pb-0">
             {{-- Marca del producto text-muted: color gris small: texto pequeño mb-1: pequeño margen abajo text-uppercase: todo en mayúsculas tracking-wide: separación de letras (CSS propio) --}}
-                {{ $marca }}
             <p class="text-muted small mb-1 text-uppercase tracking-wide">{{ $marca }}</p>
             {{-- Nombre del producto fw-bold: negrita fs-6: tamaño de fuente chico --}}
             <h5 class="card-title fw-bold mb-1 fs-6">{{ $nombre }}</h5>
