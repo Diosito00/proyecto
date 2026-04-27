@@ -4,7 +4,7 @@
 .carousel-item img {
     height: 65vh; /* Ocupa el 65% del alto de la pantalla visible */
     min-height: 450px; /* Garantiza que nunca sea más bajita que 450px */
-    object-fit: cover; /* Recorta los bordes sobrantes sin deformar la zapatilla */
+    object-fit: cover; /* Recorta los bordes sobrantes sin deformar la imagen */
     object-position: center; /* Asegura que el centro de la foto siempre se vea */
 }
 

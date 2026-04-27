@@ -18,7 +18,7 @@
     <!-- Carga íconos desde internet (CDN) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Carga hoja de estilos propia del proyecto "catalogo.css".-->
-    <link rel="stylesheet" href="css/style-catalogo.css">
+    <link rel="stylesheet" href="{{ asset('css/style-catalogo.css') }}?v={{ time() }}">
 </head>
 
 
