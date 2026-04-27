@@ -72,9 +72,9 @@
             {{-- btn-lg: botón más grande
                  py-3: más alto (padding Y)
                  text-uppercase tracking-wide: letras mayúsculas y separadas para más elegancia --}}
-            <button type="submit" class="btn btn-dark btn-lg w-100 rounded-3 text-uppercase fw-bold tracking-wide py-3 mb-4">
+            <a href="/" class="btn btn-dark btn-lg w-100 rounded-3 text-uppercase fw-bold tracking-wide py-3 mb-4">
                 Ingresar <i class="bi bi-arrow-right ms-2"></i>
-            </button>
+            </a>
             
             {{-- border-top pt-4: Línea divisoria gris y padding superior --}}
             <div class="text-center border-top pt-4">
