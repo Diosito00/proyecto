@@ -11,21 +11,7 @@
     padding-bottom: 0.8rem;
 }
 
-/* Estilo de los enlaces principales */
-.center-links .nav-link {
-    color: #ffffff !important;
-    font-weight: 700; /* Letra en negrita */
-    font-size: 15px;
-    padding: 0.5rem 1.2rem !important; /* Espaciado entre palabras */
-    transition: color 0.2s ease-in-out;
-}
 
-/* Efecto al pasar el mouse por los enlaces */
-.center-links .nav-link:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    color: #a0a0a0 !important;
-}
 
 /* Estilo de la caja de BUSCAR */
 /* .btn-search {

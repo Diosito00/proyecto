@@ -57,5 +57,19 @@
             
         </div>
     </div>
+
+    <!-- CONTENEDOR FLEX d-flex: activa Flexbox para organizar los elementos en línea -->
+    <div class="d-flex">
+    <!-- BOTÓN DE LOGIN, <a>: se usa como botón que redirige a la página de login (/login), btn-outline-light: botón con borde blanco y fondo transparente, border-0: elimina el borde por defecto
+    d-flex: convierte el botón en flexbox, align-items-center: centra verticalmente el contenido (ícono + texto), gap-2: agrega espacio entre el ícono y el texto, px-3 py-2: padding horizontal y vertical, rounded-pill: bordes totalmente redondeados (estilo tipo cápsula)-->
+    <a href="/login" class="btn btn-outline-light fw-bold border-0 d-flex align-items-center gap-2 px-3 py-2 rounded-pill">
+        
+        <!-- ÍCONO DE USUARIO bi bi-person: ícono de Bootstrap Icons representa usuario/login -->
+        <i class="bi bi-person"></i> 
+        <!-- TEXTO DEL BOTÓN span: contenedor en línea para el texto permite separar visualmente del ícono -->
+        <span>Ingresar</span>
+    </a>
+    </div>
+
 </nav>
 </html>

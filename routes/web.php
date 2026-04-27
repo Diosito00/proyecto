@@ -65,3 +65,11 @@ Route::post('/contacto', function (Request $request) {
 Route::get('/contacto/exito', function () {
     return view('contacto-exito');
 })->name('contacto.exito');
+
+// Ruta GET para mostrar la página de login
+
+Route::get('/login', function () {
+    // return view('login'):
+    // Le dice a Laravel que renderice la vista llamada "login.blade.php"
+    return view('login');
+});

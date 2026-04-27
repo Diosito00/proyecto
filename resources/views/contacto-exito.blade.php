@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Título de la pestaña -->
     <title>Mensaje enviado | Tillas - Zapatillas Urbanas</title>
+    <link rel="icon" href="{{ asset('imagenes/Logo-blanco.ico') }}" type="image/x-icon">
     <!-- Bootstrap: framework de estilos -->
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
     <!-- CSS personalizado para esta página -->
