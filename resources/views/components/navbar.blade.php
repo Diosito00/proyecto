@@ -14,7 +14,7 @@
     <!-- Bootstrap Icons: librería de íconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- CSS propio del navbar -->
-    <link rel="stylesheet" href="css/style-navbar.css">
+    <link rel="stylesheet" href="{{ asset('css/style-navbar.css') }}?v={{ time() }}">
 </head>
 
 <!-- NAVBAR  nav: etiqueta semántica para navegación navbar: clase base de Bootstrap navbar-expand-lg: expandido en PC, colapsado en mobile custom-navbar: clase propia para estilos personalizados -->
@@ -53,12 +53,34 @@
                 <li class="nav-item"><a class="nav-link fs-8" href="/contacto">Contacto</a></li>
                 <li class="nav-item"><a class="nav-link fs-8" href="/terminos">Terminos de uso</a></li>
             </ul>
+            <ul class="navbar-nav ms-auto align-items-center">    
+                @if(session('usuario_logueado'))
+                    
+                    <li class="nav-item">
+                        <span class="nav-link text-white fw-bold me-3" style="text-transform: none;">
+                            <i class="bi bi-person-check me-1"></i> Hola, {{ session('nombre_usuario') }}
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-danger btn-sm" href="/cerrar-sesion">
+                            Salir
+                        </a>
+                    </li>
 
-            
+                @else
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">
+                            <i class="bi bi-person-circle me-1 mb-1"></i> Iniciar sesión
+                        </a>
+                    </li>
+
+                @endif
+            </ul>
         </div>
     </div>
 
-    <!-- CONTENEDOR FLEX d-flex: activa Flexbox para organizar los elementos en línea -->
+    {{-- <!-- CONTENEDOR FLEX d-flex: activa Flexbox para organizar los elementos en línea -->
     <div class="d-flex">
     <!-- BOTÓN DE LOGIN, <a>: se usa como botón que redirige a la página de login (/login), btn-outline-light: botón con borde blanco y fondo transparente, border-0: elimina el borde por defecto
     d-flex: convierte el botón en flexbox, align-items-center: centra verticalmente el contenido (ícono + texto), gap-2: agrega espacio entre el ícono y el texto, px-3 py-2: padding horizontal y vertical, rounded-pill: bordes totalmente redondeados (estilo tipo cápsula)-->
@@ -69,7 +91,7 @@
         <!-- TEXTO DEL BOTÓN span: contenedor en línea para el texto permite separar visualmente del ícono -->
         <span>Ingresar</span>
     </a>
-    </div>
+    </div> --}}
 
 </nav>
 </html>

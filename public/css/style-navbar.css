@@ -1,58 +1,64 @@
+/* =========================================
+   FUENTES
+========================================= */
+/* Nota: Esta fuente "Windows 3.1" le da un toque retro/hacker muy particular. 
+   Si es parte de la identidad de Tillas, ¡dejala! Si buscabas algo súper moderno y limpio, 
+   te sugiero cambiarla a algo como 'Montserrat' o 'Inter' desde Google Fonts. */
 @font-face {
     font-family: 'SystemFont';
     src: url('fonts/system-font-from-windows-3-1.otf') format('opentype');
     font-display: swap;
 }
 
-/* Color de fondo del navbar (Casi negro como en la imagen) */
+/* =========================================
+   CONTENEDOR PRINCIPAL DEL NAVBAR
+========================================= */
 .custom-navbar {
-    background-color: #1a1a1a; 
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    background-color: #111111; /* Un negro un pelín más profundo para máximo contraste */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Línea inferior casi invisible para separar del fondo */
 }
 
-/* Estilo de los enlaces principales */
-.center-links .nav-link {
-    color: #ffffff !important;
-    font-weight: 700; /* Letra en negrita */
-    font-size: 15px;
-    padding: 0.5rem 1.2rem !important; /* Espaciado entre palabras */
-    transition: color 0.2s ease-in-out;
-}
-
-/* Efecto al pasar el mouse por los enlaces */
-.center-links .nav-link:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    color: #a0a0a0 !important;
-}
-
-
-/* Estilo de la caja de BUSCAR */
-/* .btn-search {
-    background-color: transparent;
-    color: #ffffff;
-    border: 1px solid #ffffff; /* Borde gris oscuro 
-    border-radius: 0; /* Quita el redondeo por defecto de Bootstrap
-    padding: 0.4rem 1rem;
-    font-size: 14px;
+/*
+   ENLACES DEL MENÚ (Inicio, Catálogo, Login, etc) */
+.custom-navbar .nav-link {
+    color: #ffffff !important; /* Blanco 100% puro */
     font-weight: 600;
-    transition: all 0.2s;
-} */
+    font-size: 0.85rem;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+    padding: 0.5rem 1.2rem !important;
+    opacity: 1 !important; /* Forzamos a que no haya transparencia */
+    transition: all 0.3s ease;
+}
 
-/* .btn-search:hover {
-    border-color: #ffffff; /* El borde se ilumina al pasar el mouse 
-    color: #ffffff;
-} */
+/* Efecto Hover */
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    color: #a0a0a0 !important; /* Cambia a gris claro al pasar el mouse para dar feedback */
+    transform: translateY(-2px); 
+}
 
-/* Estilo de los iconos (Corazón, Carrito, Usuario) */
-/*.nav-icons a {
+/*   ÍCONOS (Usuario)*/
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Espacio uniforme entre los íconos */
+}
+
+.nav-icons a {
     color: #ffffff;
-    font-size: 1.2rem; /* Tamaño de los iconos
+    font-size: 1.3rem; /* Tamaño ideal para que el dedo acierte en el celular */
+    opacity: 0.8;
+    transition: all 0.3s ease;
     text-decoration: none;
-    transition: color 0.2s;
-}*/
+    display: flex;
+    align-items: center;
+}
 
-/*.nav-icons a:hover {
-    color: #a0a0a0;
-} */
+.nav-icons a:hover {
+    opacity: 1;
+    color: #ffffff;
+    transform: scale(1.15); /* Efecto "Latido": El ícono crece un 15% al pasar el mouse */
+}

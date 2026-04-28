@@ -76,3 +76,11 @@ Route::get('/login', function () {
 });
 
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+
+Route::get('/cerrar-sesion', function () {
+    // 1. Vaciamos el "casillero" temporal por completo
+    session()->flush(); 
+    
+    // 2. Lo mandamos de vuelta a la página principal
+    return redirect('/')->with('success', 'Cerraste sesión correctamente. ¡Hasta pronto!');
+});
