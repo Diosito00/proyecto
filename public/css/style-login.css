@@ -1,0 +1,77 @@
+/* Fondo general */
+.body-login {
+    /* background: crea un degradado desde un negro (#111) a un gris oscuro (#2c2c2c) */
+    background: linear-gradient(135deg, #111, #2c2c2c);
+     /* min-height: asegura que el fondo ocupe al menos toda la altura de la pantalla */
+    min-height: 100vh;
+}
+
+/* Tarjeta */
+/* .login-card:Contenedor principal del formulario */
+.login-card {
+    /* max-width: limita el ancho máximo (no se estira demasiado en PC) */
+    max-width: 420px;
+    /* width: permite que en celular ocupe todo el ancho disponible */
+    width: 100%;
+    /* border-radius: redondea las esquinas*/
+    border-radius: 20px;
+     /* padding: espacio interno para que el contenido no quede pegado */
+    padding: 40px;
+    /* background: fondo blanco para contrastar con el fondo oscuro */
+    background: white;
+    /* animation: aplica animación al aparecer */
+    animation: fadeIn 0.6s ease;
+}
+
+/* Ícono */
+/* .login-icon:Ícono principal (usuario) arriba del formulario */
+.login-icon {
+    /* font-size: tamaño grande del ícono */
+    font-size: 3rem;
+    /* color: negro */
+    color: #000;
+}
+
+/* Botón */
+/* .btn-login:Botón principal para enviar el formulario */
+.btn-login {
+    /* border-radius: lo hace completamente redondeado (estilo cápsula) */
+    border-radius: 50px; 
+    /* padding: aumenta el tamaño del botón */
+    padding: 12px;
+    /* font-weight: hace el texto más grueso */
+    font-weight: 600;
+    /* letter-spacing: separa las letras */
+    letter-spacing: 1px;
+    /* transition: suaviza animaciones (hover) */
+    transition: all 0.3s ease;
+}
+
+/* EFECTO HOVER (cuando pasas el mouse) */
+.btn-login:hover {
+    /* cambia el fondo a negro */
+    background-color: #111;
+    /* mueve el botón ligeramente hacia arriba */
+    transform: translateY(-2px);
+    /* agrega sombra para efecto "elevado" */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Animación */
+/* @keyframes fadeIn:Define la animación usada en la tarjeta */
+@keyframes fadeIn {
+    /* estado inicial */
+    from {
+          /* invisible */
+        opacity: 0;
+        /* desplazado hacia abajo */
+        transform: translateY(25px);
+    }
+    /* estado final */
+    to {
+        /* completamente visible */
+        opacity: 1;
+        /* vuelve a su posición original */
+        transform: translateY(0);
+    }
+}

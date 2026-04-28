@@ -66,3 +66,7 @@ Route::post('/contacto', function (Request $request) {
 Route::get('/contacto/exito', function () {
     return view('contacto-exito');
 })->name('contacto.exito');
+
+Route::get('/login', function () {
+    return view('login');
+});
