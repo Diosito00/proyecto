@@ -44,8 +44,14 @@
             <p class="text-muted small">Ingresá tus datos para continuar a tu cuenta.</p>
         </div>
 
+        @if(session('error'))
+            <div class="alert alert-danger text-center small shadow-sm rounded-3">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i> {{ session('error') }}
+            </div>
+        @endif
+
         {{-- action="{{ route('login.post') }}": Es la forma correcta en Laravel de enviar datos (usarás esta u otra ruta que definas) --}}
-        <form action="/" method="POST">
+        <form action="{{ route('login.post') }}" method="POST">
             @csrf {{-- Protección obligatoria de Laravel para formularios --}}
 
             <div class="form-floating mb-3">
@@ -72,9 +78,9 @@
             {{-- btn-lg: botón más grande
                  py-3: más alto (padding Y)
                  text-uppercase tracking-wide: letras mayúsculas y separadas para más elegancia --}}
-            <a href="/" class="btn btn-dark btn-lg w-100 rounded-3 text-uppercase fw-bold tracking-wide py-3 mb-4">
+            <button type="submit" class="btn btn-dark btn-lg w-100 rounded-3 text-uppercase fw-bold tracking-wide py-3 mb-4">
                 Ingresar <i class="bi bi-arrow-right ms-2"></i>
-            </a>
+            </button>
             
             {{-- border-top pt-4: Línea divisoria gris y padding superior --}}
             <div class="text-center border-top pt-4">

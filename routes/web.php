@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 // Importa Request para manejar datos enviados en formularios (POST)
 use Illuminate\Http\Request;
-// Importa el controlador de productos
+// Importa el controlador de productos y autenticacion en login
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthController;
 
 // Ruta principal del sitio ("/")
 // Cuando alguien entra a la raíz, devuelve la vista 'inicio'
@@ -73,3 +74,5 @@ Route::get('/login', function () {
     // Le dice a Laravel que renderice la vista llamada "login.blade.php"
     return view('login');
 });
+
+Route::post('/login', [AuthController::class, 'login'])->name('login.post');
