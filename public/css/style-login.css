@@ -1,7 +1,6 @@
 /* Fondo general */
 .body-login {
-    /* background: crea un degradado desde un negro (#111) a un gris oscuro (#2c2c2c) */
-    background: linear-gradient(135deg, #111, #2c2c2c);
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../imagenes/fondo-login.jpeg') center/cover;
      /* min-height: asegura que el fondo ocupe al menos toda la altura de la pantalla */
     min-height: 100vh;
 }
