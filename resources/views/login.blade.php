@@ -44,7 +44,6 @@
             <p class="text-muted small">Ingresá tus datos para continuar a tu cuenta.</p>
         </div>
 
-        {{-- action="{{ route('login.post') }}": Es la forma correcta en Laravel de enviar datos (usarás esta u otra ruta que definas) --}}
         <form action="/">
             @csrf {{-- Protección obligatoria de Laravel para formularios --}}
 
