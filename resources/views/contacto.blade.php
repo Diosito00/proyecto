@@ -108,7 +108,7 @@
                         <li class="mb-4 d-flex align-items-center">
                             <i class="bi bi-envelope fs-3 me-3 text-secondary"></i> 
                             <!-- mailto: abre el correo -->
-                            <a href="mailto:info@tillas.com" class="text-white text-decoration-none">info@tillas.com</a>
+                            <a class="text-white text-decoration-none">info@tillas.com</a>
                         </li>
                         <li class="mb-4 d-flex align-items-center">
                             <i class="bi bi-phone fs-3 me-3 text-secondary"></i> 
@@ -122,15 +122,15 @@
 
                 <!-- gap-3: espacio entre íconos  border-top: línea superior  pt-4: padding arriba -->
                     <div class="d-flex gap-3 mb-4 border-top border-secondary pt-4">
-                        <a href="{{ route('en-proceso') }}" class="text-white text-decoration-none">
+                        <a href="{{ route('en-proceso') }}" class="text-white text-decoration-none" target="blank">
                             <i class="bi bi-instagram fs-4">
 
                             </i>
                         </a>
-                        <a href="{{ route('en-proceso') }}" class="text-white text-decoration-none">
+                        <a href="{{ route('en-proceso') }}" class="text-white text-decoration-none" target="blank">
                             <i class="bi bi-tiktok fs-4"></i>
                         </a>
-                        <a href="{{ route('en-proceso') }}" class="text-white text-decoration-none">
+                        <a href="{{ route('en-proceso') }}" class="text-white text-decoration-none" target="blank">
                             <i class="bi bi-whatsapp fs-4"></i>
                         </a>
                     </div>

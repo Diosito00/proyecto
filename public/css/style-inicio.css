@@ -134,7 +134,6 @@
 
 .promo-banner {
     /* Reemplaza con una imagen apaisada de buena resolución donde salgan zapatillas */
-    /* Como estás en Laravel, lo ideal sería aplicarlo en línea en el HTML, pero te lo dejo aquí estructurado */
     background-image: url('../imagenes/banner-tillas.png'); 
     background-size: cover;
     background-position: center;
